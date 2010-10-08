@@ -8,7 +8,7 @@ import javax.persistence.*;
 
 @Entity
 public class Content extends Model {
-	
+
 	@Lob
 	public String content;
 	public Date createdAt;

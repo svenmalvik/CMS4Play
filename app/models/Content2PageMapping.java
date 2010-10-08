@@ -6,6 +6,7 @@ import play.db.jpa.*;
 import java.util.*;
 import javax.persistence.*;
 
+@Entity
 public class Content2PageMapping extends Model {
 	
 	long contentId;
