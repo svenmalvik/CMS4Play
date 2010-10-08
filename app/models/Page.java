@@ -6,13 +6,19 @@ import play.db.jpa.Model;
 @Entity
 public class Page extends Model {
 
-	long parentPageId;
+	Page parentPage;
 	String title;
 	String url;
 
-	public Page(long parentPageId, String title, String url) {
+	public Page(String title, String url) {
 		super();
-		this.parentPageId = parentPageId;
+		this.title = title;
+		this.url = url;
+	}
+	
+	public Page(Page parentPage, String title, String url) {
+		super();
+		this.parentPage = parentPage;
 		this.title = title;
 		this.url = url;
 	}

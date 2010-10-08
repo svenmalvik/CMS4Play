@@ -9,12 +9,11 @@ import javax.persistence.*;
 @Entity
 public class Content2PageMapping extends Model {
 	
-	long contentId;
-	long pageId;
+	Content content;
+	Page page;
 	
-	public Content2PageMapping(long contentId, long pageId) {
-		// @todo contentId and pageId must exist
-		this.contentId = contentId;
-		this.pageId = pageId;
+	public Content2PageMapping(Content content, Page page) {
+		this.content = content;
+		this.page = page;
 	}
 }
