@@ -1,5 +1,5 @@
-08 Oct 2010 13:51:21,394 INFO  ~ Starting /home/sven/workspace/CMS4Play
-08 Oct 2010 13:51:21,965 WARN  ~ You're running Play! in DEV mode
-08 Oct 2010 13:51:22,061 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
-08 Oct 2010 13:51:31,405 INFO  ~ Connected to jdbc:hsqldb:mem:playembed
-08 Oct 2010 13:51:35,066 INFO  ~ Application 'CMS4Play' is now started !
+08 Oct 2010 14:32:09,102 INFO  ~ Starting /home/sven/workspace/CMS4Play
+08 Oct 2010 14:32:09,682 WARN  ~ You're running Play! in DEV mode
+08 Oct 2010 14:32:09,803 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+08 Oct 2010 14:32:14,906 INFO  ~ Connected to jdbc:hsqldb:mem:playembed
+08 Oct 2010 14:32:18,761 INFO  ~ Application 'CMS4Play' is now started !

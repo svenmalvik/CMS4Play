@@ -12,9 +12,11 @@ public class Content extends Model {
 	@Lob
 	public String content;
 	public Date createdAt;
+	public Date modifiedAt;
 
 	public Content(String content) {
 		this.content = content;
-		this.createdAt = new Date();
+		createdAt = new Date();
+		modifiedAt = createdAt;
 	}
 }
