@@ -1,0 +1,11 @@
+Page(indexPage):
+    title: Startseite
+    url: k
+
+Content(firstContent):
+    content: The Pragmatic Programmer Here comes a short abstract of the book
+
+
+Content2PageMapping(fistMapping):
+    page: indexPage
+    content: firstContent

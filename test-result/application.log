@@ -1,5 +1,43 @@
-08 Oct 2010 14:32:09,102 INFO  ~ Starting /home/sven/workspace/CMS4Play
-08 Oct 2010 14:32:09,682 WARN  ~ You're running Play! in DEV mode
-08 Oct 2010 14:32:09,803 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
-08 Oct 2010 14:32:14,906 INFO  ~ Connected to jdbc:hsqldb:mem:playembed
-08 Oct 2010 14:32:18,761 INFO  ~ Application 'CMS4Play' is now started !
+10 Oct 2010 20:17:58,683 INFO  ~ Starting /home/devel/workspace/CMS4Play
+10 Oct 2010 20:17:59,593 WARN  ~ You're running Play! in DEV mode
+10 Oct 2010 20:17:59,770 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+10 Oct 2010 20:18:10,913 INFO  ~ Connected to jdbc:hsqldb:mem:playembed
+10 Oct 2010 20:18:13,024 INFO  ~ Application 'CMS4Play' is now started !
+10 Oct 2010 20:18:13,334 DEBUG ~ /* insert models.Content */ insert into Content (id, content, createdAt, modifiedAt) values (null, ?, ?, ?)
+10 Oct 2010 20:18:13,348 DEBUG ~ call identity()
+10 Oct 2010 20:18:13,376 DEBUG ~ /* insert models.Content */ insert into Content (id, content, createdAt, modifiedAt) values (null, ?, ?, ?)
+10 Oct 2010 20:18:13,377 DEBUG ~ call identity()
+10 Oct 2010 20:18:13,378 DEBUG ~ /* insert models.Content */ insert into Content (id, content, createdAt, modifiedAt) values (null, ?, ?, ?)
+10 Oct 2010 20:18:13,378 DEBUG ~ call identity()
+10 Oct 2010 20:18:13,379 DEBUG ~ /* insert models.Content */ insert into Content (id, content, createdAt, modifiedAt) values (null, ?, ?, ?)
+10 Oct 2010 20:18:13,380 DEBUG ~ call identity()
+10 Oct 2010 20:18:13,386 DEBUG ~ /* insert models.Content */ insert into Content (id, content, createdAt, modifiedAt) values (null, ?, ?, ?)
+10 Oct 2010 20:18:13,389 DEBUG ~ call identity()
+10 Oct 2010 20:18:13,391 DEBUG ~ /* insert models.Content */ insert into Content (id, content, createdAt, modifiedAt) values (null, ?, ?, ?)
+10 Oct 2010 20:18:13,391 DEBUG ~ call identity()
+10 Oct 2010 20:18:13,393 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+10 Oct 2010 20:18:13,393 DEBUG ~ call identity()
+10 Oct 2010 20:18:13,394 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+10 Oct 2010 20:18:13,394 DEBUG ~ call identity()
+10 Oct 2010 20:18:13,400 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+10 Oct 2010 20:18:13,401 DEBUG ~ call identity()
+10 Oct 2010 20:18:13,402 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+10 Oct 2010 20:18:13,402 DEBUG ~ call identity()
+10 Oct 2010 20:18:13,403 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+10 Oct 2010 20:18:13,409 DEBUG ~ call identity()
+10 Oct 2010 20:18:13,411 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+10 Oct 2010 20:18:13,411 DEBUG ~ call identity()
+10 Oct 2010 20:18:13,481 DEBUG ~ /* insert models.Content2PageMapping */ insert into Content2PageMapping (id, content, page) values (null, ?, ?)
+10 Oct 2010 20:18:13,485 DEBUG ~ call identity()
+10 Oct 2010 20:18:13,497 DEBUG ~ /* insert models.Content2PageMapping */ insert into Content2PageMapping (id, content, page) values (null, ?, ?)
+10 Oct 2010 20:18:13,505 DEBUG ~ call identity()
+10 Oct 2010 20:18:13,515 DEBUG ~ /* insert models.Content2PageMapping */ insert into Content2PageMapping (id, content, page) values (null, ?, ?)
+10 Oct 2010 20:18:13,516 DEBUG ~ call identity()
+10 Oct 2010 20:18:13,522 DEBUG ~ /* insert models.Content2PageMapping */ insert into Content2PageMapping (id, content, page) values (null, ?, ?)
+10 Oct 2010 20:18:13,523 DEBUG ~ call identity()
+10 Oct 2010 20:18:13,526 DEBUG ~ /* insert models.Content2PageMapping */ insert into Content2PageMapping (id, content, page) values (null, ?, ?)
+10 Oct 2010 20:18:13,527 DEBUG ~ call identity()
+10 Oct 2010 20:18:13,530 DEBUG ~ /* insert models.Content2PageMapping */ insert into Content2PageMapping (id, content, page) values (null, ?, ?)
+10 Oct 2010 20:18:13,531 DEBUG ~ call identity()
+10 Oct 2010 20:18:13,954 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
+10 Oct 2010 20:18:13,971 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?

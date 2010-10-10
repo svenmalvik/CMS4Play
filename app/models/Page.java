@@ -6,9 +6,9 @@ import play.db.jpa.Model;
 @Entity
 public class Page extends Model {
 
-	Page parentPage;
-	String title;
-	String url;
+	public Page parentPage;
+	public String title;
+	public String url;
 
 	public Page(String title, String url) {
 		super();
@@ -21,5 +21,9 @@ public class Page extends Model {
 		this.parentPage = parentPage;
 		this.title = title;
 		this.url = url;
+	}
+	
+	public static Page getPageFromUrl(String url) {
+		return Page.find("url", url).first();
 	}
 }

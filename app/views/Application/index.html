@@ -1,4 +1,22 @@
 #{extends 'main.html' /}
-#{set title:'Home' /}
+#{set title:page.title /}
 
-#{welcome /}
+<div class="mainmenu">
+	#{list items:mainmenu, as:'mainmenu'}
+		<div>
+			<a href="${mainmenu.url}.html">${mainmenu.title}</a>
+		</div>
+	#{/list}
+</div>
+---------------------------
+<div class="submenu">
+	#{list items:submenu, as:'submenu'}
+		<div>
+			<a href="${submenu.url}.html">${submenu.title}</a>
+		</div>
+	#{/list}
+</div>
+
+<div class="content">
+	${content.content}
+</div>

@@ -1,0 +1,10 @@
+Page(indexpage):
+    title: Startseite
+    url: /
+
+Content(firstcontent):
+    content: Dies ist ein Testtext
+
+Content2PageMapping(fistmapping):
+    content: firstcontent
+    page: indexpage
