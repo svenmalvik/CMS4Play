@@ -1,13 +1,17 @@
 package controllers;
 
+import static models.Menu.URL_INDEX;
+
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 import models.Content;
 import models.Content2PageMapping;
 import models.Menu;
 import models.Page;
-import static models.Menu.*;
+
 import org.apache.commons.lang.StringUtils;
 
 import play.mvc.Controller;
@@ -20,15 +24,17 @@ public class Application extends Controller {
 		Content content = null;
 		Page page = null;
 		List<Page> submenu = null;
+		String url = params.get("url");
 		
-		// Mainmenu
+		// Menu Level 0-n
+		Map<String, List<Page>> menu = Menu.getInstance().getMenu();
+		
+		// Mainmenu Level0
 		List<Page> mainmenu = Menu.getInstance().getSubmenuForUrl(URL_INDEX);
 		
-		// Submenu
-		String url = params.get("url");
-		if (StringUtils.isNotEmpty(url)) {
+		// Submenu Level 1
+		if (StringUtils.isNotEmpty(url) && !StringUtils.equals(URL_INDEX, url)) {
 			submenu = Menu.getInstance().getSubmenuForUrl(url);
-			//submenu = Menu.getInstance().
 			page = Page.getPageFromUrl(url);
 	    	
 	    	
@@ -40,6 +46,6 @@ public class Application extends Controller {
 		
 		content = Content2PageMapping.getFirstC2PFromPage(page).content;
     	
-		render(page, mainmenu, submenu, content);
+		render(page, menu, mainmenu, submenu, content);
     }
 }

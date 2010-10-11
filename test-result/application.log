@@ -1,43 +1,55 @@
-10 Oct 2010 20:17:58,683 INFO  ~ Starting /home/devel/workspace/CMS4Play
-10 Oct 2010 20:17:59,593 WARN  ~ You're running Play! in DEV mode
-10 Oct 2010 20:17:59,770 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
-10 Oct 2010 20:18:10,913 INFO  ~ Connected to jdbc:hsqldb:mem:playembed
-10 Oct 2010 20:18:13,024 INFO  ~ Application 'CMS4Play' is now started !
-10 Oct 2010 20:18:13,334 DEBUG ~ /* insert models.Content */ insert into Content (id, content, createdAt, modifiedAt) values (null, ?, ?, ?)
-10 Oct 2010 20:18:13,348 DEBUG ~ call identity()
-10 Oct 2010 20:18:13,376 DEBUG ~ /* insert models.Content */ insert into Content (id, content, createdAt, modifiedAt) values (null, ?, ?, ?)
-10 Oct 2010 20:18:13,377 DEBUG ~ call identity()
-10 Oct 2010 20:18:13,378 DEBUG ~ /* insert models.Content */ insert into Content (id, content, createdAt, modifiedAt) values (null, ?, ?, ?)
-10 Oct 2010 20:18:13,378 DEBUG ~ call identity()
-10 Oct 2010 20:18:13,379 DEBUG ~ /* insert models.Content */ insert into Content (id, content, createdAt, modifiedAt) values (null, ?, ?, ?)
-10 Oct 2010 20:18:13,380 DEBUG ~ call identity()
-10 Oct 2010 20:18:13,386 DEBUG ~ /* insert models.Content */ insert into Content (id, content, createdAt, modifiedAt) values (null, ?, ?, ?)
-10 Oct 2010 20:18:13,389 DEBUG ~ call identity()
-10 Oct 2010 20:18:13,391 DEBUG ~ /* insert models.Content */ insert into Content (id, content, createdAt, modifiedAt) values (null, ?, ?, ?)
-10 Oct 2010 20:18:13,391 DEBUG ~ call identity()
-10 Oct 2010 20:18:13,393 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
-10 Oct 2010 20:18:13,393 DEBUG ~ call identity()
-10 Oct 2010 20:18:13,394 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
-10 Oct 2010 20:18:13,394 DEBUG ~ call identity()
-10 Oct 2010 20:18:13,400 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
-10 Oct 2010 20:18:13,401 DEBUG ~ call identity()
-10 Oct 2010 20:18:13,402 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
-10 Oct 2010 20:18:13,402 DEBUG ~ call identity()
-10 Oct 2010 20:18:13,403 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
-10 Oct 2010 20:18:13,409 DEBUG ~ call identity()
-10 Oct 2010 20:18:13,411 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
-10 Oct 2010 20:18:13,411 DEBUG ~ call identity()
-10 Oct 2010 20:18:13,481 DEBUG ~ /* insert models.Content2PageMapping */ insert into Content2PageMapping (id, content, page) values (null, ?, ?)
-10 Oct 2010 20:18:13,485 DEBUG ~ call identity()
-10 Oct 2010 20:18:13,497 DEBUG ~ /* insert models.Content2PageMapping */ insert into Content2PageMapping (id, content, page) values (null, ?, ?)
-10 Oct 2010 20:18:13,505 DEBUG ~ call identity()
-10 Oct 2010 20:18:13,515 DEBUG ~ /* insert models.Content2PageMapping */ insert into Content2PageMapping (id, content, page) values (null, ?, ?)
-10 Oct 2010 20:18:13,516 DEBUG ~ call identity()
-10 Oct 2010 20:18:13,522 DEBUG ~ /* insert models.Content2PageMapping */ insert into Content2PageMapping (id, content, page) values (null, ?, ?)
-10 Oct 2010 20:18:13,523 DEBUG ~ call identity()
-10 Oct 2010 20:18:13,526 DEBUG ~ /* insert models.Content2PageMapping */ insert into Content2PageMapping (id, content, page) values (null, ?, ?)
-10 Oct 2010 20:18:13,527 DEBUG ~ call identity()
-10 Oct 2010 20:18:13,530 DEBUG ~ /* insert models.Content2PageMapping */ insert into Content2PageMapping (id, content, page) values (null, ?, ?)
-10 Oct 2010 20:18:13,531 DEBUG ~ call identity()
-10 Oct 2010 20:18:13,954 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-10 Oct 2010 20:18:13,971 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
+11 Oct 2010 10:32:11,287 INFO  ~ Starting /home/sven/workspace/CMS4Play
+11 Oct 2010 10:32:11,891 WARN  ~ You're running Play! in DEV mode
+11 Oct 2010 10:32:12,024 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+11 Oct 2010 10:32:16,882 INFO  ~ Connected to jdbc:hsqldb:mem:playembed
+11 Oct 2010 10:32:20,467 INFO  ~ Application 'CMS4Play' is now started !
+11 Oct 2010 10:32:20,900 DEBUG ~ /* insert models.Content */ insert into Content (id, content, createdAt, modifiedAt) values (null, ?, ?, ?)
+11 Oct 2010 10:32:20,917 DEBUG ~ call identity()
+11 Oct 2010 10:32:20,970 DEBUG ~ /* insert models.Content */ insert into Content (id, content, createdAt, modifiedAt) values (null, ?, ?, ?)
+11 Oct 2010 10:32:20,970 DEBUG ~ call identity()
+11 Oct 2010 10:32:20,971 DEBUG ~ /* insert models.Content */ insert into Content (id, content, createdAt, modifiedAt) values (null, ?, ?, ?)
+11 Oct 2010 10:32:20,971 DEBUG ~ call identity()
+11 Oct 2010 10:32:20,972 DEBUG ~ /* insert models.Content */ insert into Content (id, content, createdAt, modifiedAt) values (null, ?, ?, ?)
+11 Oct 2010 10:32:20,976 DEBUG ~ call identity()
+11 Oct 2010 10:32:20,977 DEBUG ~ /* insert models.Content */ insert into Content (id, content, createdAt, modifiedAt) values (null, ?, ?, ?)
+11 Oct 2010 10:32:20,978 DEBUG ~ call identity()
+11 Oct 2010 10:32:20,979 DEBUG ~ /* insert models.Content */ insert into Content (id, content, createdAt, modifiedAt) values (null, ?, ?, ?)
+11 Oct 2010 10:32:20,980 DEBUG ~ call identity()
+11 Oct 2010 10:32:20,981 DEBUG ~ /* insert models.Content */ insert into Content (id, content, createdAt, modifiedAt) values (null, ?, ?, ?)
+11 Oct 2010 10:32:20,982 DEBUG ~ call identity()
+11 Oct 2010 10:32:20,983 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+11 Oct 2010 10:32:20,984 DEBUG ~ call identity()
+11 Oct 2010 10:32:20,990 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+11 Oct 2010 10:32:20,991 DEBUG ~ call identity()
+11 Oct 2010 10:32:20,993 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+11 Oct 2010 10:32:20,993 DEBUG ~ call identity()
+11 Oct 2010 10:32:20,994 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+11 Oct 2010 10:32:20,994 DEBUG ~ call identity()
+11 Oct 2010 10:32:20,996 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+11 Oct 2010 10:32:20,996 DEBUG ~ call identity()
+11 Oct 2010 10:32:20,997 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+11 Oct 2010 10:32:20,998 DEBUG ~ call identity()
+11 Oct 2010 10:32:20,999 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+11 Oct 2010 10:32:20,999 DEBUG ~ call identity()
+11 Oct 2010 10:32:21,039 DEBUG ~ /* insert models.Content2PageMapping */ insert into Content2PageMapping (id, content, page) values (null, ?, ?)
+11 Oct 2010 10:32:21,040 DEBUG ~ call identity()
+11 Oct 2010 10:32:21,054 DEBUG ~ /* insert models.Content2PageMapping */ insert into Content2PageMapping (id, content, page) values (null, ?, ?)
+11 Oct 2010 10:32:21,057 DEBUG ~ call identity()
+11 Oct 2010 10:32:21,061 DEBUG ~ /* insert models.Content2PageMapping */ insert into Content2PageMapping (id, content, page) values (null, ?, ?)
+11 Oct 2010 10:32:21,062 DEBUG ~ call identity()
+11 Oct 2010 10:32:21,066 DEBUG ~ /* insert models.Content2PageMapping */ insert into Content2PageMapping (id, content, page) values (null, ?, ?)
+11 Oct 2010 10:32:21,067 DEBUG ~ call identity()
+11 Oct 2010 10:32:21,071 DEBUG ~ /* insert models.Content2PageMapping */ insert into Content2PageMapping (id, content, page) values (null, ?, ?)
+11 Oct 2010 10:32:21,071 DEBUG ~ call identity()
+11 Oct 2010 10:32:21,076 DEBUG ~ /* insert models.Content2PageMapping */ insert into Content2PageMapping (id, content, page) values (null, ?, ?)
+11 Oct 2010 10:32:21,076 DEBUG ~ call identity()
+11 Oct 2010 10:32:21,083 DEBUG ~ /* insert models.Content2PageMapping */ insert into Content2PageMapping (id, content, page) values (null, ?, ?)
+11 Oct 2010 10:32:21,084 DEBUG ~ call identity()
+11 Oct 2010 10:32:21,909 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
+11 Oct 2010 10:32:21,950 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
+11 Oct 2010 10:32:30,439 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
+11 Oct 2010 10:32:30,441 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
+11 Oct 2010 10:32:31,869 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
+11 Oct 2010 10:32:31,872 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
+11 Oct 2010 10:32:33,639 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
+11 Oct 2010 10:32:33,645 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?

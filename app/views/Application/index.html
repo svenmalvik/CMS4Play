@@ -1,7 +1,10 @@
 #{extends 'main.html' /}
 #{set title:page.title /}
 
+---------------------------
+<h1>Mainmenu</h1>
 <div class="mainmenu">
+	<a href="/">Startseite</a>
 	#{list items:mainmenu, as:'mainmenu'}
 		<div>
 			<a href="${mainmenu.url}.html">${mainmenu.title}</a>
@@ -9,6 +12,7 @@
 	#{/list}
 </div>
 ---------------------------
+<h1>Realmenu From Level 1</h1>
 <div class="submenu">
 	#{list items:submenu, as:'submenu'}
 		<div>
@@ -16,7 +20,10 @@
 		</div>
 	#{/list}
 </div>
-
+---------------------------
+<h1>Content</h1>
 <div class="content">
-	${content.content}
+	#{verbatim}
+	    ${content.content}
+	#{/verbatim}
 </div>

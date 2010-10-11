@@ -19,17 +19,16 @@ public class Menu {
 	
 	private Menu() {
 		if (isMenuNotBuildYet()) {
-			_menu = new HashMap<String, List<Page>>();
-			fillMenu();
+			createMenu();
 		}
 	}
-	
+
 	public Map<String, List<Page>> getMenu() {
 		return _menu;
 	}
 
-	private void fillMenu() {
-		// from db
+	private void createMenu() {
+		_menu = new HashMap<String, List<Page>>();
 	}
 
 	private boolean isMenuNotBuildYet() {
