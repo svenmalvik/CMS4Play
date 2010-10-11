@@ -59,7 +59,27 @@ public class Bootstrap extends Job {
     	List<Page> scrumSubmenu = new ArrayList<Page>();
     	scrumSubmenu.add(scrumSub1Page);
     	scrumSubmenu.add(scrumSub2Page);
-    	menu.put(scrumPage.url, scrumSubmenu);   		
+    	menu.put(scrumPage.url, scrumSubmenu);
+    	
+    	// PagePathes
+    	Map<String, List<Page>> pagePathes = Menu.getInstance().getPagePathes();
+    	
+    	List<Page> scrum1Path = new ArrayList<Page>();
+    	scrum1Path.add(scrumPage);
+    	pagePathes.put("scrumsub1", scrum1Path);
+    	
+    	List<Page> scrum2Path = new ArrayList<Page>();
+    	scrum2Path.add(scrumPage);
+    	pagePathes.put("scrumsub2", scrum2Path);
+    	
+    	List<Page> lean1Path = new ArrayList<Page>();
+    	lean1Path.add(leanPage);
+    	pagePathes.put("leansub1", lean1Path);
+    	
+    	List<Page> lean2Path = new ArrayList<Page>();
+    	lean2Path.add(leanPage);
+    	pagePathes.put("leansub2", lean2Path);    	
+    		
     	   	
 	}
 }

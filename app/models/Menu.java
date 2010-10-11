@@ -9,6 +9,7 @@ public class Menu {
 	public static final String URL_INDEX = "index";
 	private static Menu menu;
 	private Map<String, List<Page>> _menu;
+	private Map<String, List<Page>> pathToPage;
 
 	public static Menu getInstance() {
 		if (menu == null) {
@@ -20,7 +21,16 @@ public class Menu {
 	private Menu() {
 		if (isMenuNotBuildYet()) {
 			createMenu();
+			createPagePathes();
 		}
+	}
+	
+	private void createPagePathes() {
+		pathToPage = new HashMap<String, List<Page>>();
+	}
+	
+	public Map<String, List<Page>> getPagePathes() {
+		return pathToPage;
 	}
 
 	public Map<String, List<Page>> getMenu() {
@@ -37,5 +47,9 @@ public class Menu {
 	
 	public List<Page> getSubmenuForUrl(String url) {
 		return _menu.get(url);
+	}
+
+	public List<Page> getPathToPageFromUrl(String url) {
+		return pathToPage.get(url);
 	}
 }

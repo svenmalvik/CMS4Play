@@ -25,6 +25,7 @@ public class Application extends Controller {
 		Page page = null;
 		List<Page> submenu = null;
 		String url = params.get("url");
+		List<Page> pathToPage = Menu.getInstance().getPathToPageFromUrl(url);
 		
 		// Menu Level 0-n
 		Map<String, List<Page>> menu = Menu.getInstance().getMenu();
@@ -34,7 +35,12 @@ public class Application extends Controller {
 		
 		// Submenu Level 1
 		if (StringUtils.isNotEmpty(url) && !StringUtils.equals(URL_INDEX, url)) {
-			submenu = Menu.getInstance().getSubmenuForUrl(url);
+			if (pathToPage != null) {
+				submenu = Menu.getInstance().getSubmenuForUrl(pathToPage.get(0).url);
+				
+			} else {
+				submenu = Menu.getInstance().getSubmenuForUrl(url);
+			}
 			page = Page.getPageFromUrl(url);
 	    	
 	    	
@@ -46,6 +52,6 @@ public class Application extends Controller {
 		
 		content = Content2PageMapping.getFirstC2PFromPage(page).content;
     	
-		render(page, menu, mainmenu, submenu, content);
+		render(page, menu, mainmenu, submenu, pathToPage, content);
     }
 }
