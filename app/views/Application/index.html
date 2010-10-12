@@ -1,29 +1,40 @@
 #{extends 'main.html' /}
 #{set title:page.title /}
 
----------------------------
-<h1>Mainmenu</h1>
-<div class="mainmenu">
-	<a href="/">Startseite</a>
-	#{list items:mainmenu, as:'mainmenu'}
-		<div>
-			<a href="${mainmenu.url}.html">${mainmenu.title}</a>
+<div class="wrapper">
+
+	<div id="main-nav">
+		<a href="index.html">Startseite</a>
+		<ul>
+			#{list items:mainmenu, as:'mainmenu'}
+				<li>
+					<a href="${mainmenu.url}.html">${mainmenu.title}</a>
+				</li>
+			#{/list}		
+		</ul>
+	</div>
+	
+	<div id="basic-content" class="content-area">
+		<div class="main-content">
+			<div class="left-menu"> 
+				#{list items:submenu, as:'submenu'}
+					<ul>
+						<li>
+							<a href="${submenu.url}.html">${submenu.title}</a>
+						</li>
+					</ul>
+				#{/list}			
+			</div>
+			
+			<div id="main-area">
+				<h1>Content</h1>
+				<div class="content">
+					#{verbatim}
+					    ${content.content}
+					#{/verbatim}					
+				</div>
+			
+			</div>
 		</div>
-	#{/list}
-</div>
----------------------------
-<h1>Realmenu From Level 1</h1>
-<div class="submenu">
-	#{list items:submenu, as:'submenu'}
-		<div>
-			<a href="${submenu.url}.html">${submenu.title}</a>
-		</div>
-	#{/list}
-</div>
----------------------------
-<h1>Content</h1>
-<div class="content">
-	#{verbatim}
-	    ${content.content}
-	#{/verbatim}
+	</div>
 </div>

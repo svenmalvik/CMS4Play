@@ -1,8 +1,116 @@
-.content {
-	color: #444444;
-	width: 300px;
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, a, em, font, img, strong, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+	border:0 none;
+	margin:0;
+	outline:0 none;
+	padding:0;
 }
 
-.submenu_level1 {
-	margin: 0px 0px 0px 20px;
+body {
+	font:12px/1.416em Helvetica,Arial,sans-serif;
+	letter-spacing:0;
+	text-decoration:none;
+	word-spacing:normal;
+}
+
+.wrapper {
+	margin:0 auto;
+	padding:0;
+	width:960px;
+}
+#main-nav {
+	margin:20px 0 14px 10px;
+	position:relative;
+	width:960px;
+	z-index:500;
+}
+#main-nav ul {
+	float:left;
+	margin:0;
+}
+#main-nav li {
+	background:url("http://www.tieto.com/tieto-images/arrow_right.gif") no-repeat scroll right center transparent;
+	display:block;
+	float:left;
+	padding:0 14px;
+	position:relative;
+	text-align:left;
+}
+
+#basic-content.content-area  {
+	color:#5E5E5E;
+	background:url("http://www.tieto.com/tieto-images/tieto_logo2.gif") no-repeat scroll right bottom #FFFFFF;
+	border-bottom:1px solid #99CC33;
+	border-top:1px solid #99CC33;
+}
+.content-area {
+	text-align:left;
+	width:960px;
+}
+.main-content  {
+	height:auto;
+	min-height:360px;
+}
+
+.main-content .left-menu {
+	height:auto;
+	min-height:360px;
+	float:left;
+	height:360px;
+	width:180px;
+}
+#basic-content.content-area .left-menu {
+	background:none repeat scroll 0 0 #FFFFFF;
+	width:180px;
+}
+#basic-content.content-area #main-area {
+	background:none repeat scroll 0 0 transparent;
+	border-left:1px solid #99CC33;
+	width:770px;
+}
+.main-content #main-area {
+	background:url("../tieto-images/img_forest.gif") no-repeat scroll left bottom transparent;
+	float:left;
+	height:360px;
+	text-align:left;
+	width:780px;
+	height:auto !important;
+	min-height:360px;
+}
+#basic-content.content-area .main-content #main-area .content div {
+	color:#5E5E5E;
+}
+#basic-content.content-area #main-area h1 {
+	color:#5E5E5E;
+	padding:20px 10px 10px 0;
+	margin:10px 10px 0 30px;
+}
+.main-content #main-area div[class~="content"] {
+	height:auto;
+	min-height:239px;
+}
+#basic-content.content-area .content {
+	color:#5E5E5E;
+	float:left;
+	padding:10px 10px 0 30px;
+	width:510px;
+}
+ol, ul {
+	list-style:none outside none;
+}
+#basic-content.content-area li {
+	padding-bottom:4px;
+}
+.main-content .left-menu ul li {
+	padding:4px 0;
+}
+select, input, li, textarea {
+	font-family:Helvetica,Arial,sans-serif;
+	font-size:12px;
+}
+#basic-content.content-area .left-menu ul {
+	padding:20px 20px 0 10px;
+}
+a {
+	color:#5E5E5E;
+	text-decoration:none;
 }
