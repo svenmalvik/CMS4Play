@@ -3,7 +3,7 @@ package controllers;
 import static models.Menu.URL_INDEX;
 
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -48,9 +48,17 @@ public class Application extends Controller {
 			page = Page.getPageFromUrl(URL_INDEX);
 			
 		}
-		
 		content = Content2PageMapping.getFirstC2PFromPage(page).content;
-    	
+		
 		render(page, menu, mainmenu, submenu, pathToPage, content, cms);
     }
+	
+	public static void cms(Long contentId, String content) {
+		Content _content = Content.findById(contentId);
+		_content.content = content;
+		_content.modifiedAt = new Date();
+		_content.save();
+
+		index();
+	}
 }

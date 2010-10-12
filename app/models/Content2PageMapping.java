@@ -2,9 +2,9 @@ package models;
 
 //@author Sven Malvik
 
-import play.db.jpa.*;
-import java.util.*;
-import javax.persistence.*;
+import javax.persistence.Entity;
+
+import play.db.jpa.Model;
 
 @Entity
 public class Content2PageMapping extends Model {

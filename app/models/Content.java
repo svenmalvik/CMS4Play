@@ -1,10 +1,14 @@
 package models;
 
-import play.db.jpa.*;
-import java.util.*;
-import javax.persistence.*;
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.Lob;
+
+import play.db.jpa.Model;
 
 // @author Sven Malvik
+
 
 @Entity
 public class Content extends Model {

@@ -35,8 +35,10 @@
 					
 					#{if cms}
 					<div class="cms">
-						<form method="post" action="">
-							<textarea name="content" style="width: 100%; height: 200px;"></textarea>
+						<form method="post" action="@{Application.cms(content.id)}">
+							<textarea name="content" style="width: 100%; height: 200px;">
+								${content.content}
+							</textarea>
 							<br />
 							<input type="submit" name="save" value="Submit" />
 							<input type="reset" name="reset" value="Reset" />	
