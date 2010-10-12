@@ -33,6 +33,7 @@
 					    ${content.content}
 					#{/verbatim}	
 					
+					#{if cms}
 					<div class="cms">
 						<form method="post" action="">
 							<textarea name="content" style="width: 100%; height: 200px;"></textarea>
@@ -41,6 +42,7 @@
 							<input type="reset" name="reset" value="Reset" />	
 						</form>							
 					</div>
+					#{/if}
 				</div>
 				
 			</div>

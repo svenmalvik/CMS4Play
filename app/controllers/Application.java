@@ -18,13 +18,12 @@ import play.mvc.Controller;
 
 public class Application extends Controller {
 
-    
-
 	public static void index() {
 		Content content = null;
 		Page page = null;
 		List<Page> submenu = null;
 		String url = params.get("url");
+		boolean cms = StringUtils.equals(params.get("cms"), "1") ? true : false;
 		List<Page> pathToPage = Menu.getInstance().getPathToPageFromUrl(url);
 		
 		// Menu Level 0-n
@@ -52,6 +51,6 @@ public class Application extends Controller {
 		
 		content = Content2PageMapping.getFirstC2PFromPage(page).content;
     	
-		render(page, menu, mainmenu, submenu, pathToPage, content);
+		render(page, menu, mainmenu, submenu, pathToPage, content, cms);
     }
 }
