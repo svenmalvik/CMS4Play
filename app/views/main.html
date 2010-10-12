@@ -9,8 +9,24 @@
         <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
         <script src="@{'/public/javascripts/jquery-1.4.2.min.js'}" type="text/javascript" charset="utf-8"></script>
         #{get 'moreScripts' /}
+        
+		<!-- TinyMCE -->
+		<script src="@{'/public/jscripts/tiny_mce/tiny_mce.js'}" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			tinyMCE.init({
+				mode : "textareas",
+				theme : "advanced",
+				theme_advanced_toolbar_location : "top",
+				theme_advanced_resizing : true,
+				theme_advanced_toolbar_align : "left",
+				theme_advanced_statusbar_location : "bottom"
+			});
+		</script>
+		<!-- /TinyMCE -->
+        
     </head>
     <body>
         #{doLayout /}
+        
     </body>
 </html>
