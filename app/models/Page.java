@@ -8,7 +8,7 @@ import play.db.jpa.Model;
 @Entity
 public class Page extends Model {
 
-	public Page parentPage;
+	public Page parentPage; 
 	public String title;
 	public String url;
 
