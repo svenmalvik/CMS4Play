@@ -115,6 +115,31 @@ a {
 	text-decoration:none;
 }
 
-.cms {
-	margin: 20px 0px 0px 0px;
+#cms {
+	margin: auto;
+	border: 1px solid #aaaaaa;
+	padding: 10px;
+}
+
+#popup {
+	height: 100%;
+	width: 100%;
+	background: #000000;
+	position: absolute;
+	top: 0;
+	-moz-opacity:0.75;
+	-khtml-opacity: 0.75;
+	opacity: 0.75;
+	filter:alpha(opacity=75);
+}
+#window {
+	width: 680px;
+	height: 450px;
+	margin: 0 auto;
+	border: 1px solid #000000;
+	background: #cecece;
+	position: absolute;
+	top: 100px;
+	left: 25%;
+	padding: 20px;
 }

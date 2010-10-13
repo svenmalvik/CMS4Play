@@ -48,7 +48,7 @@ public class Application extends Controller {
 			page = Page.getPageFromUrl(URL_INDEX);
 			
 		}
-		content = Content2PageMapping.getFirstC2PFromPage(page).content;
+		content = Content.findById(Content2PageMapping.getFirstC2PFromPage(page).content.id);
 		
 		render(page, menu, mainmenu, submenu, pathToPage, content, cms);
     }
