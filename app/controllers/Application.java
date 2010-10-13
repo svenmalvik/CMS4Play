@@ -19,7 +19,6 @@ import play.mvc.Controller;
 public class Application extends Controller {
 
 	public static void index() {
-		Content content = null;
 		Page page = null;
 		List<Page> submenu = null;
 		String url = params.get("url");
@@ -49,7 +48,11 @@ public class Application extends Controller {
 			
 		}
 		Content2PageMapping c2p = Content2PageMapping.getFirstC2PFromPage(page);
-		content = c2p != null ? c2p.content : new Content();
+		if (c2p == null) {
+			Content content = new Content("").save();
+			c2p = new Content2PageMapping(content, page).save();
+		}
+		Content content = Content.findById(c2p.content.id);
 		
 		render(page, menu, mainmenu, submenu, pathToPage, content, cms);
     }

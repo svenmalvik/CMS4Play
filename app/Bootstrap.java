@@ -48,8 +48,8 @@ public class Bootstrap extends Job {
     	menu.put(pHome.url, sub_pHome);
     	
     	List<Page> sub_pKanban = new ArrayList<Page>();
-    	sub_pKanban.add(pKanbanMeasure);
     	sub_pKanban.add(pKanbanVis);
+    	sub_pKanban.add(pKanbanMeasure);
     	menu.put(pKanban.url, sub_pKanban);
     	
     	// PagePathes
@@ -58,6 +58,10 @@ public class Bootstrap extends Job {
     	List<Page> path_pKanbanVis = new ArrayList<Page>();
     	path_pKanbanVis.add(pKanban);
     	pagePathes.put(pKanbanVis.url, path_pKanbanVis);
+    	
+    	List<Page> path_pKanbanMeasure = new ArrayList<Page>();
+    	path_pKanbanMeasure.add(pKanban);
+    	pagePathes.put(pKanbanMeasure.url, path_pKanbanMeasure);    	
     	
 //    	Page scrumPage = new Page("Scrum", "scrum").save();
 //    	Page scrumSub1Page = new Page("ScrumSub1", "scrumsub1").save();
