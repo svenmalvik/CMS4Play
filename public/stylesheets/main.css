@@ -18,14 +18,11 @@ body {
 	width:960px;
 }
 #main-nav {
-	margin:20px 0 14px 10px;
-	position:relative;
 	width:960px;
-	z-index:500;
 }
 #main-nav ul {
 	float:left;
-	margin:0;
+	margin:10px;
 }
 #main-nav li {
 	background:url("http://www.tieto.com/tieto-images/arrow_right.gif") no-repeat scroll right center transparent;
@@ -48,14 +45,12 @@ body {
 	text-align:left;
 	width:960px;
 }
-.main-content  {
-
-}
 
 .main-content .left-menu {
 	min-height:360px;
 	float:left;
 	width:180px;
+	padding:10px 0px 10px 0px;
 }
 #basic-content.content-area .left-menu {
 	background:none repeat scroll 0 0 #FFFFFF;
@@ -107,7 +102,7 @@ select, input, li, textarea {
 	font-size:12px;
 }
 #basic-content.content-area .left-menu ul {
-	padding:20px 20px 0 10px;
+	padding:10px 20px 10px 10px;
 }
 a {
 	color:#5E5E5E;

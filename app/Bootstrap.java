@@ -28,29 +28,47 @@ public class Bootstrap extends Job {
     	Page pKanbanVis = new Page("Visualizing", "kanban_visualizing").save();
     	Page pKanbanMeasure = new Page("Measuring", "kanban_measuring").save();
     	Page pScrum = new Page("Scrum", "scrum").save();
-//    	Page pScrumBacklog = new Page("Backlog", "scrum_backlog").save();
-//    	Page pScrumTaskboard = new Page("Task Board", "scrum_taskboard").save();
-//    	Page pScrumTeamlookahead = new Page("TeamLookAhead", "scrum_teanlookahaed").save();
-//    	Page pScrumSprintplanning = new Page("Sprint Planning", "scrum_sprintplanning").save();
-//    	Page pScrumSprintdemo = new Page("Sprint Demo", "scrum_sprintdemo").save();
-//    	Page pScrumRetrospect = new Page("Retrospect", "scrum_retrospect").save();
-//    	Page pScrumDailystandup = new Page("Daily Stand up", "scrum_dailystandup").save();
-//    	Page pScrumSprintburndownchart = new Page("Sprint Burndown Chart", "scrum_sprintburndownchart").save();
+    	Page pScrumBacklog = new Page("Backlog", "scrum_backlog").save();
+    	Page pScrumTaskboard = new Page("Task Board", "scrum_taskboard").save();
+    	Page pScrumTeamlookahead = new Page("TeamLookAhead", "scrum_teanlookahaed").save();
+    	Page pScrumSprintplanning = new Page("Sprint Planning", "scrum_sprintplanning").save();
+    	Page pScrumSprintdemo = new Page("Sprint Demo", "scrum_sprintdemo").save();
+    	Page pScrumRetrospect = new Page("Retrospect", "scrum_retrospect").save();
+    	Page pScrumDailystandup = new Page("Daily Stand up", "scrum_dailystandup").save();
+    	Page pScrumSprintburndownchart = new Page("Sprint Burndown Chart", "scrum_sprintburndownchart").save();
     	Page pSpike = new Page("Spike", "spike").save();
-//    	Page pSpike_whatis = new Page("What is spike?", "spike_whatis").save();
-//    	Page pSpikeHowto = new Page("Use in CM & Wealth", "spike_howto").save();
+    	Page pSpike_whatis = new Page("What is spike?", "spike_whatis").save();
+    	Page pSpikeHowto = new Page("Use in CM & Wealth", "spike_howto").save();
+    	Page pJira = new Page("Jira", "jira").save();
     	
     	List<Page> sub_pHome = new ArrayList<Page>();
     	sub_pHome.add(pBud);
     	sub_pHome.add(pKanban);
     	sub_pHome.add(pScrum);
     	sub_pHome.add(pSpike);
+    	sub_pHome.add(pJira);
     	menu.put(pHome.url, sub_pHome);
     	
     	List<Page> sub_pKanban = new ArrayList<Page>();
     	sub_pKanban.add(pKanbanVis);
     	sub_pKanban.add(pKanbanMeasure);
     	menu.put(pKanban.url, sub_pKanban);
+    	
+    	List<Page> sub_pScrum = new ArrayList<Page>();
+    	sub_pScrum.add(pScrumBacklog);
+    	sub_pScrum.add(pScrumTaskboard);
+    	sub_pScrum.add(pScrumTeamlookahead);
+    	sub_pScrum.add(pScrumSprintplanning);
+    	sub_pScrum.add(pScrumSprintdemo);
+    	sub_pScrum.add(pScrumRetrospect);
+    	sub_pScrum.add(pScrumDailystandup);
+    	sub_pScrum.add(pScrumSprintburndownchart);
+    	menu.put(pScrum.url, sub_pScrum);
+    	
+    	List<Page> sub_pSpike = new ArrayList<Page>();
+    	sub_pSpike.add(pSpike_whatis);
+    	sub_pSpike.add(pSpikeHowto);
+    	menu.put(pSpike.url, sub_pSpike);
     	
     	// PagePathes
     	Map<String, List<Page>> pagePathes = Menu.getInstance().getPagePathes();
@@ -63,53 +81,46 @@ public class Bootstrap extends Job {
     	path_pKanbanMeasure.add(pKanban);
     	pagePathes.put(pKanbanMeasure.url, path_pKanbanMeasure);    	
     	
-//    	Page scrumPage = new Page("Scrum", "scrum").save();
-//    	Page scrumSub1Page = new Page("ScrumSub1", "scrumsub1").save();
-//    	Page scrumSub2Page = new Page("ScrumSub2", "scrumsub2").save();
-//    	Page leanPage = new Page("Lea", "lean").save();
-//    	Page leanSub1Page = new Page("LeanSub1", "leansub1").save();
-//    	Page leanSub2Page = new Page("LeanSub2", "leansub2").save();  
-//		
-//		Content startseiteContent = new Content("Dies ist ein <b>Startseite</b>").save();
-//    	Content scrumContent = new Content("Dies ist Scrum").save();
-//    	Content scrumContent1 = new Content("Dies ist Scrum1").save();
-//    	Content scrumContent2 = new Content("Dies ist Scrum2").save();
-//    	Content leanContent = new Content("Dies Lean").save();
-//    	Content leanContent1 = new Content("Dies ist Lean1").save();
-//    	Content leanContent2 = new Content("Dies ist Lean2").save();
-//    	
-//    	new Content2PageMapping(startseiteContent, pHome).save();
-//    	new Content2PageMapping(scrumContent, scrumPage).save();
-//    	new Content2PageMapping(scrumContent1, scrumSub1Page).save();
-//    	new Content2PageMapping(scrumContent2, scrumSub2Page).save();
-//    	new Content2PageMapping(leanContent, leanPage).save();
-//    	new Content2PageMapping(leanContent1, leanSub1Page).save();
-//    	new Content2PageMapping(leanContent2, leanSub2Page).save();    	
-//        	
-//    	List<Page> scrumSubmenu = new ArrayList<Page>();
-//    	scrumSubmenu.add(scrumSub1Page);
-//    	scrumSubmenu.add(scrumSub2Page);
-//    	menu.put(scrumPage.url, scrumSubmenu);
-//    	
-//    	// PagePathes
-//    	Map<String, List<Page>> pagePathes = Menu.getInstance().getPagePathes();
-//    	
-//    	List<Page> scrum1Path = new ArrayList<Page>();
-//    	scrum1Path.add(scrumPage);
-//    	pagePathes.put("scrumsub1", scrum1Path);
-//    	
-//    	List<Page> scrum2Path = new ArrayList<Page>();
-//    	scrum2Path.add(scrumPage);
-//    	pagePathes.put("scrumsub2", scrum2Path);
-//    	
-//    	List<Page> lean1Path = new ArrayList<Page>();
-//    	lean1Path.add(leanPage);
-//    	pagePathes.put("leansub1", lean1Path);
-//    	
-//    	List<Page> lean2Path = new ArrayList<Page>();
-//    	lean2Path.add(leanPage);
-//    	pagePathes.put("leansub2", lean2Path);    	
-    		
-    	   	
+    	List<Page> path_pScrumBacklog = new ArrayList<Page>();
+    	path_pScrumBacklog.add(pScrum);
+    	pagePathes.put(pScrumBacklog.url, path_pScrumBacklog);    	
+    	
+    	List<Page> path_pScrumTaskboard = new ArrayList<Page>();
+    	path_pScrumTaskboard.add(pScrum);
+    	pagePathes.put(pScrumTaskboard.url, path_pScrumTaskboard);    	
+    	
+    	List<Page> path_pScrumTeamlookahead = new ArrayList<Page>();
+    	path_pScrumTeamlookahead.add(pScrum);
+    	pagePathes.put(pScrumTeamlookahead.url, path_pScrumTeamlookahead);    	
+    	
+    	List<Page> path_pScrumSprintplanning = new ArrayList<Page>();
+    	path_pScrumSprintplanning.add(pScrum);
+    	pagePathes.put(pScrumSprintplanning.url, path_pScrumSprintplanning);    	
+    	
+    	List<Page> path_pScrumSprintdemo = new ArrayList<Page>();
+    	path_pScrumSprintdemo.add(pScrum);
+    	pagePathes.put(pScrumSprintdemo.url, path_pScrumSprintdemo);    	
+    	
+    	List<Page> path_pScrumRetrospect = new ArrayList<Page>();
+    	path_pScrumRetrospect.add(pScrum);
+    	pagePathes.put(pScrumRetrospect.url, path_pScrumRetrospect);    	
+    	
+    	List<Page> path_pScrumDailystandup = new ArrayList<Page>();
+    	path_pScrumDailystandup.add(pScrum);
+    	pagePathes.put(pScrumDailystandup.url, path_pScrumDailystandup);  
+    	
+    	List<Page> path_pScrumSprintburndownchart = new ArrayList<Page>();
+    	path_pScrumSprintburndownchart.add(pScrum);
+    	pagePathes.put(pScrumSprintburndownchart.url, path_pScrumSprintburndownchart);  
+    	
+    	List<Page> path_pSpike_whatis = new ArrayList<Page>();
+    	path_pSpike_whatis.add(pSpike);
+    	pagePathes.put(pSpike_whatis.url, path_pSpike_whatis);  
+    	
+    	List<Page> path_pSpikeHowto = new ArrayList<Page>();
+    	path_pSpikeHowto.add(pSpike);
+    	pagePathes.put(pSpikeHowto.url, path_pSpikeHowto);  
+    	
+	
 	}
 }

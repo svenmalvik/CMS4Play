@@ -4,8 +4,11 @@
 <div class="wrapper">
 
 	<div id="main-nav">
-		<a href="index.html">Startseite</a>
+		
 		<ul>
+			<li>
+				<a href="index.html">Startseite</a>
+			</li>
 			#{list items:mainmenu, as:'mainmenu'}
 				<li>
 					<a href="${mainmenu.url}.html">${mainmenu.title}</a>

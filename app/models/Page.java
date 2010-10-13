@@ -20,4 +20,12 @@ public class Page extends Model {
 	public static Page getPageFromUrl(String url) {
 		return Page.find("url", url).first();
 	}
+	
+	public Page save() {
+		Page page = Page.find("url", url).first();
+		if (page == null) {
+			page = super.save();
+		}
+		return page;
+	}
 }
