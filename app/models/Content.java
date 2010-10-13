@@ -23,4 +23,8 @@ public class Content extends Model {
 		createdAt = new Date();
 		modifiedAt = createdAt;
 	}
+
+	public Content() {
+		new Content("");
+	}
 }

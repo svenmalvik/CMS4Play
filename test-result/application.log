@@ -1,298 +1,107 @@
-13 Oct 2010 08:15:42,676 INFO  ~ Starting /home/sven/workspace/CMS4Play
-13 Oct 2010 08:15:43,279 WARN  ~ You're running Play! in DEV mode
-13 Oct 2010 08:15:43,377 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
-13 Oct 2010 08:15:48,307 INFO  ~ Connected to jdbc:hsqldb:mem:playembed
-13 Oct 2010 08:15:51,900 INFO  ~ Application 'CMS4Play' is now started !
-13 Oct 2010 08:15:52,340 DEBUG ~ /* insert models.Content */ insert into Content (id, content, createdAt, modifiedAt) values (null, ?, ?, ?)
-13 Oct 2010 08:15:52,360 DEBUG ~ call identity()
-13 Oct 2010 08:15:52,412 DEBUG ~ /* insert models.Content */ insert into Content (id, content, createdAt, modifiedAt) values (null, ?, ?, ?)
-13 Oct 2010 08:15:52,413 DEBUG ~ call identity()
-13 Oct 2010 08:15:52,416 DEBUG ~ /* insert models.Content */ insert into Content (id, content, createdAt, modifiedAt) values (null, ?, ?, ?)
-13 Oct 2010 08:15:52,416 DEBUG ~ call identity()
-13 Oct 2010 08:15:52,417 DEBUG ~ /* insert models.Content */ insert into Content (id, content, createdAt, modifiedAt) values (null, ?, ?, ?)
-13 Oct 2010 08:15:52,421 DEBUG ~ call identity()
-13 Oct 2010 08:15:52,422 DEBUG ~ /* insert models.Content */ insert into Content (id, content, createdAt, modifiedAt) values (null, ?, ?, ?)
-13 Oct 2010 08:15:52,424 DEBUG ~ call identity()
-13 Oct 2010 08:15:52,425 DEBUG ~ /* insert models.Content */ insert into Content (id, content, createdAt, modifiedAt) values (null, ?, ?, ?)
-13 Oct 2010 08:15:52,426 DEBUG ~ call identity()
-13 Oct 2010 08:15:52,427 DEBUG ~ /* insert models.Content */ insert into Content (id, content, createdAt, modifiedAt) values (null, ?, ?, ?)
-13 Oct 2010 08:15:52,427 DEBUG ~ call identity()
-13 Oct 2010 08:15:52,428 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
-13 Oct 2010 08:15:52,430 DEBUG ~ call identity()
-13 Oct 2010 08:15:52,435 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
-13 Oct 2010 08:15:52,435 DEBUG ~ call identity()
-13 Oct 2010 08:15:52,436 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
-13 Oct 2010 08:15:52,437 DEBUG ~ call identity()
-13 Oct 2010 08:15:52,437 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
-13 Oct 2010 08:15:52,438 DEBUG ~ call identity()
-13 Oct 2010 08:15:52,439 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
-13 Oct 2010 08:15:52,440 DEBUG ~ call identity()
-13 Oct 2010 08:15:52,441 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
-13 Oct 2010 08:15:52,442 DEBUG ~ call identity()
-13 Oct 2010 08:15:52,444 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
-13 Oct 2010 08:15:52,444 DEBUG ~ call identity()
-13 Oct 2010 08:15:52,472 DEBUG ~ /* insert models.Content2PageMapping */ insert into Content2PageMapping (id, content, page) values (null, ?, ?)
-13 Oct 2010 08:15:52,473 DEBUG ~ call identity()
-13 Oct 2010 08:15:52,490 DEBUG ~ /* insert models.Content2PageMapping */ insert into Content2PageMapping (id, content, page) values (null, ?, ?)
-13 Oct 2010 08:15:52,497 DEBUG ~ call identity()
-13 Oct 2010 08:15:52,508 DEBUG ~ /* insert models.Content2PageMapping */ insert into Content2PageMapping (id, content, page) values (null, ?, ?)
-13 Oct 2010 08:15:52,509 DEBUG ~ call identity()
-13 Oct 2010 08:15:52,520 DEBUG ~ /* insert models.Content2PageMapping */ insert into Content2PageMapping (id, content, page) values (null, ?, ?)
-13 Oct 2010 08:15:52,523 DEBUG ~ call identity()
-13 Oct 2010 08:15:52,529 DEBUG ~ /* insert models.Content2PageMapping */ insert into Content2PageMapping (id, content, page) values (null, ?, ?)
-13 Oct 2010 08:15:52,530 DEBUG ~ call identity()
-13 Oct 2010 08:15:52,535 DEBUG ~ /* insert models.Content2PageMapping */ insert into Content2PageMapping (id, content, page) values (null, ?, ?)
-13 Oct 2010 08:15:52,535 DEBUG ~ call identity()
-13 Oct 2010 08:15:52,541 DEBUG ~ /* insert models.Content2PageMapping */ insert into Content2PageMapping (id, content, page) values (null, ?, ?)
-13 Oct 2010 08:15:52,542 DEBUG ~ call identity()
-13 Oct 2010 08:15:53,327 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:15:53,361 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:15:53,370 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:16:20,369 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:16:20,380 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:16:20,398 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:16:33,187 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:16:33,194 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:16:33,212 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:16:39,021 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:16:39,041 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:16:39,054 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:17:50,134 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:17:50,141 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:17:50,158 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:17:55,602 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:17:55,636 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:17:55,641 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:18:59,271 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:18:59,276 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:18:59,290 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:19:25,498 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:19:25,509 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:19:25,558 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:19:44,944 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:19:44,945 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:19:44,951 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:20:02,632 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:20:02,718 DEBUG ~ /* update models.Content */ update Content set content=?, createdAt=?, modifiedAt=? where id=?
-13 Oct 2010 08:20:02,763 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:20:02,772 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:20:02,782 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:20:07,943 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:20:07,955 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:20:07,961 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:20:11,476 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:20:11,480 DEBUG ~ /* update models.Content */ update Content set content=?, createdAt=?, modifiedAt=? where id=?
-13 Oct 2010 08:20:11,522 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:20:11,526 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:20:11,545 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:20:33,307 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:20:33,327 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:20:33,337 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:20:37,769 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:20:37,781 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:20:37,787 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:20:52,292 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:20:52,298 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:20:52,303 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:21:12,207 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:21:12,223 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:21:12,227 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:23:09,913 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:23:09,926 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:23:09,929 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:23:25,975 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:23:25,987 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:23:25,991 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:24:01,224 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:24:01,237 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:24:01,244 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:24:07,995 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:24:08,007 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:24:08,021 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:24:38,651 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:24:38,655 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:24:38,661 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:24:44,260 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:24:44,270 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:24:44,278 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:24:56,001 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:24:56,007 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:24:56,031 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:25:56,785 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:25:56,804 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:25:56,807 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:26:03,813 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:26:03,822 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:26:03,826 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:26:32,390 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:26:32,401 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:26:32,428 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:26:36,731 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:26:36,742 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:26:36,769 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:27:40,959 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:27:40,966 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:27:40,978 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:28:08,559 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:28:08,573 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:28:08,580 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:29:26,077 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:29:26,080 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:29:26,092 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:29:32,515 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:29:32,523 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:29:32,536 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:30:22,743 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:30:22,751 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:30:22,753 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:30:54,719 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:30:54,730 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:30:54,736 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:31:13,643 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:31:13,656 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:31:13,667 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:32:30,517 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:32:30,520 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:32:30,532 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:32:56,608 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:32:56,611 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:32:56,626 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:33:02,383 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:33:02,393 DEBUG ~ /* update models.Content */ update Content set content=?, createdAt=?, modifiedAt=? where id=?
-13 Oct 2010 08:33:02,426 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:33:02,429 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:33:02,435 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:33:41,925 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:33:41,928 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:33:41,933 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:33:48,052 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:33:48,071 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:33:48,094 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:34:13,862 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:34:13,863 DEBUG ~ /* update models.Content */ update Content set content=?, createdAt=?, modifiedAt=? where id=?
-13 Oct 2010 08:34:13,880 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:34:13,881 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:34:13,882 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:36:12,961 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:36:12,982 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:36:12,984 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:36:22,059 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:36:22,077 DEBUG ~ /* update models.Content */ update Content set content=?, createdAt=?, modifiedAt=? where id=?
-13 Oct 2010 08:36:22,130 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:36:22,131 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:36:22,136 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:37:20,635 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:37:20,640 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:37:20,646 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:38:38,016 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:38:38,020 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:38:38,023 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:39:03,208 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:39:03,219 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:39:03,222 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:39:28,838 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:39:28,845 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:39:28,853 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:39:45,521 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:39:45,536 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:39:45,539 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:40:33,502 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:40:33,509 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:40:33,521 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:40:53,019 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:40:53,024 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:40:53,035 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:41:01,537 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:41:01,550 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:41:01,558 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:41:27,480 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:41:27,484 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:41:27,497 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:41:30,495 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:41:30,508 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:41:30,514 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:41:34,036 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:41:34,042 DEBUG ~ /* update models.Content */ update Content set content=?, createdAt=?, modifiedAt=? where id=?
-13 Oct 2010 08:41:34,077 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:41:34,083 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:41:34,088 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:41:39,322 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:41:39,363 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:41:39,366 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:41:53,127 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:41:53,136 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:41:53,139 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:41:57,772 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:41:57,776 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:41:57,779 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:42:02,539 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:42:02,548 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:42:02,558 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:42:05,011 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:42:05,017 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:42:05,026 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:42:22,455 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:42:22,459 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:42:22,466 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:42:29,858 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:42:29,863 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:42:29,867 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:42:36,926 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:42:36,941 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:42:36,948 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:42:52,393 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:42:52,396 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:42:52,400 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:43:01,536 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:43:01,541 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:43:01,548 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:43:03,627 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:43:03,632 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:43:03,634 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:43:12,948 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:43:12,964 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:43:12,970 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:43:35,158 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:43:35,161 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:43:35,166 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:44:01,271 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:44:01,280 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:44:01,287 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:44:25,749 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:44:25,756 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:44:25,765 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:44:45,675 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:44:45,679 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:44:45,682 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:44:55,317 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:44:55,326 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:44:55,338 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:45:12,980 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:45:12,987 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:45:12,995 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:45:26,482 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:45:26,494 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:45:26,498 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:45:39,529 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:45:39,540 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:45:39,546 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:45:54,797 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:45:54,810 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:45:54,814 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:46:09,007 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:46:09,014 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:46:09,020 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:47:31,714 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:47:31,719 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:47:31,723 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:47:35,705 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:47:35,708 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:47:35,721 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:47:52,613 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:47:52,630 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:47:52,633 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:48:01,006 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
-13 Oct 2010 08:48:01,009 DEBUG ~ /* update models.Content */ update Content set content=?, createdAt=?, modifiedAt=? where id=?
-13 Oct 2010 08:48:01,045 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
-13 Oct 2010 08:48:01,049 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
-13 Oct 2010 08:48:01,050 DEBUG ~ /* load models.Content */ select content0_.id as id0_0_, content0_.content as content0_0_, content0_.createdAt as createdAt0_0_, content0_.modifiedAt as modifiedAt0_0_ from Content content0_ where content0_.id=?
+13 Oct 2010 11:42:13,347 INFO  ~ Starting /home/sven/workspace/CMS4Play
+13 Oct 2010 11:42:13,914 WARN  ~ You're running Play! in DEV mode
+13 Oct 2010 11:42:14,045 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+13 Oct 2010 11:42:21,415 INFO  ~ Connected to jdbc:hsqldb:mem:playembed
+13 Oct 2010 11:42:25,295 INFO  ~ Application 'CMS4Play' is now started !
+13 Oct 2010 11:42:25,750 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+13 Oct 2010 11:42:25,767 DEBUG ~ call identity()
+13 Oct 2010 11:42:25,813 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+13 Oct 2010 11:42:25,813 DEBUG ~ call identity()
+13 Oct 2010 11:42:25,814 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+13 Oct 2010 11:42:25,814 DEBUG ~ call identity()
+13 Oct 2010 11:42:25,815 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+13 Oct 2010 11:42:25,815 DEBUG ~ call identity()
+13 Oct 2010 11:42:25,816 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+13 Oct 2010 11:42:25,821 DEBUG ~ call identity()
+13 Oct 2010 11:42:25,822 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+13 Oct 2010 11:42:25,824 DEBUG ~ call identity()
+13 Oct 2010 11:42:25,825 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+13 Oct 2010 11:42:25,825 DEBUG ~ call identity()
+13 Oct 2010 11:42:26,726 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id2_, page0_.parentPage as parentPage2_, page0_.title as title2_, page0_.url as url2_ from Page page0_ where page0_.url=?
+13 Oct 2010 11:42:26,763 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id1_, content2pa0_.content as content1_, content2pa0_.page as page1_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
+13 Oct 2010 11:42:29,272 ERROR ~ 
+
+@6461h9nab
+Internal Server Error (500) for request GET /
+
+Execution exception (In /app/controllers/Application.java around line 51)
+NullPointerException occured : Try to read content on null object models.Content2PageMapping (controllers.Application.index, ligne 51)
+
+play.exceptions.JavaExecutionException: Try to read content on null object models.Content2PageMapping (controllers.Application.index, ligne 51)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:285)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read content on null object models.Content2PageMapping (controllers.Application.index, ligne 51)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:174)
+	at controllers.Application.index(Application.java:51)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:408)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:403)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:176)
+	... 1 more
+13 Oct 2010 11:44:08,411 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+13 Oct 2010 11:44:08,412 DEBUG ~ call identity()
+13 Oct 2010 11:44:08,415 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+13 Oct 2010 11:44:08,415 DEBUG ~ call identity()
+13 Oct 2010 11:44:08,416 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+13 Oct 2010 11:44:08,417 DEBUG ~ call identity()
+13 Oct 2010 11:44:08,417 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+13 Oct 2010 11:44:08,418 DEBUG ~ call identity()
+13 Oct 2010 11:44:08,422 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+13 Oct 2010 11:44:08,424 DEBUG ~ call identity()
+13 Oct 2010 11:44:08,425 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+13 Oct 2010 11:44:08,425 DEBUG ~ call identity()
+13 Oct 2010 11:44:08,426 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+13 Oct 2010 11:44:08,430 DEBUG ~ call identity()
+13 Oct 2010 11:44:08,456 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id8_, page0_.parentPage as parentPage8_, page0_.title as title8_, page0_.url as url8_ from Page page0_ where page0_.url=?
+13 Oct 2010 11:44:08,479 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id7_, content2pa0_.content as content7_, content2pa0_.page as page7_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
+13 Oct 2010 11:44:08,982 ERROR ~ 
+
+@6461h9nac
+Internal Server Error (500) for request GET /
+
+Template execution error (In /app/views/Application/index.html around line 32)
+Execution error occured in template /app/views/Application/index.html. Exception raised was NullPointerException : Cannot get property 'content' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'content' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:84)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:226)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:23)
+	at play.mvc.Controller.renderTemplate(Controller.java:568)
+	at play.mvc.Controller.renderTemplate(Controller.java:553)
+	at play.mvc.Controller.render(Controller.java:597)
+	at controllers.Application.index(Application.java:56)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:408)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:403)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:176)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'content' on null object
+	at /app/views/Application/index.html.(line:32)
+	at play.templates.JavaExtensions.toString(JavaExtensions.java:73)
+	at play.templates.FastTags._verbatim(FastTags.java:47)
+	at play.templates.FastTags$_verbatim.call(Unknown Source)
+	at /app/views/Application/index.html.(line:31)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:203)
+	... 9 more
+13 Oct 2010 11:47:54,738 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+13 Oct 2010 11:47:54,739 DEBUG ~ call identity()
+13 Oct 2010 11:47:54,740 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+13 Oct 2010 11:47:54,741 DEBUG ~ call identity()
+13 Oct 2010 11:47:54,742 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+13 Oct 2010 11:47:54,743 DEBUG ~ call identity()
+13 Oct 2010 11:47:54,744 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+13 Oct 2010 11:47:54,745 DEBUG ~ call identity()
+13 Oct 2010 11:47:54,746 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+13 Oct 2010 11:47:54,746 DEBUG ~ call identity()
+13 Oct 2010 11:47:54,749 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+13 Oct 2010 11:47:54,749 DEBUG ~ call identity()
+13 Oct 2010 11:47:54,750 DEBUG ~ /* insert models.Page */ insert into Page (id, parentPage, title, url) values (null, ?, ?, ?)
+13 Oct 2010 11:47:54,751 DEBUG ~ call identity()
+13 Oct 2010 11:47:54,784 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id14_, page0_.parentPage as parentPage14_, page0_.title as title14_, page0_.url as url14_ from Page page0_ where page0_.url=?
+13 Oct 2010 11:47:54,832 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id13_, content2pa0_.content as content13_, content2pa0_.page as page13_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
+13 Oct 2010 11:48:02,068 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id14_, page0_.parentPage as parentPage14_, page0_.title as title14_, page0_.url as url14_ from Page page0_ where page0_.url=?
+13 Oct 2010 11:48:02,072 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id13_, content2pa0_.content as content13_, content2pa0_.page as page13_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
+13 Oct 2010 11:48:03,900 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id14_, page0_.parentPage as parentPage14_, page0_.title as title14_, page0_.url as url14_ from Page page0_ where page0_.url=?
+13 Oct 2010 11:48:03,902 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id13_, content2pa0_.content as content13_, content2pa0_.page as page13_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
+13 Oct 2010 11:48:05,647 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id14_, page0_.parentPage as parentPage14_, page0_.title as title14_, page0_.url as url14_ from Page page0_ where page0_.url=?
+13 Oct 2010 11:48:05,657 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id13_, content2pa0_.content as content13_, content2pa0_.page as page13_ from Content2PageMapping content2pa0_ where content2pa0_.page=?
+13 Oct 2010 11:48:06,950 DEBUG ~ /* from models.Page where url = ?1 */ select top ? page0_.id as id14_, page0_.parentPage as parentPage14_, page0_.title as title14_, page0_.url as url14_ from Page page0_ where page0_.url=?
+13 Oct 2010 11:48:06,958 DEBUG ~ /* from models.Content2PageMapping where page = ? */ select top ? content2pa0_.id as id13_, content2pa0_.content as content13_, content2pa0_.page as page13_ from Content2PageMapping content2pa0_ where content2pa0_.page=?

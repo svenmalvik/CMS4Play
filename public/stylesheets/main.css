@@ -41,21 +41,20 @@ body {
 	background:url("http://www.tieto.com/tieto-images/tieto_logo2.gif") no-repeat scroll right bottom #FFFFFF;
 	border-bottom:1px solid #99CC33;
 	border-top:1px solid #99CC33;
+	float: left;
+	min-height:360px;
 }
 .content-area {
 	text-align:left;
 	width:960px;
 }
 .main-content  {
-	height:auto;
-	min-height:360px;
+
 }
 
 .main-content .left-menu {
-	height:auto;
 	min-height:360px;
 	float:left;
-	height:360px;
 	width:180px;
 }
 #basic-content.content-area .left-menu {
@@ -80,18 +79,18 @@ body {
 	color:#5E5E5E;
 }
 #basic-content.content-area #main-area h1 {
-	color:#5E5E5E;
-	padding:20px 10px 10px 0;
-	margin:10px 10px 0 30px;
+	color: #5E5E5E;
+	padding: 10px 10px 10px 0;
+	margin: 10px 10px 0 0px;
 }
-.main-content #main-area div[class~="content"] {
-	height:auto;
-	min-height:239px;
+.main-content #main-area .content {
+	height: auto;
+	min-height: 239px;
 }
 #basic-content.content-area .content {
 	color:#5E5E5E;
 	float:left;
-	padding:10px 10px 0 30px;
+	padding:10px 10px 20px 30px;
 	width:510px;
 }
 ol, ul {

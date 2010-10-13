@@ -1,11 +1,6 @@
 #{extends 'main.html' /}
 #{set title:page.title /}
 
-
-
-
-
-
 <div class="wrapper">
 
 	<div id="main-nav">
@@ -32,36 +27,13 @@
 			</div>
 			
 			<div id="main-area">
-				<h1>Content</h1>
 				<div class="content">
 					#{verbatim}
 					    ${content.content}
 					#{/verbatim}	
-				</div>
-				
-
-						
+				</div>	
 			</div>
 
 		</div>
 	</div>
 </div>
-
-
-#{if cms}
-<div id="popup"></div>
-<div id="window">
-	<div id="cms">
-		<a href="/">Close</a>
-		<form method="post" action="@{Application.cms(content.id)}">
-			<textarea name="content" style="width: 100%; height: 200px;">
-				${content.content}
-			</textarea>
-			<br />
-			<input type="submit" name="save" value="Submit" />
-			<input type="reset" name="reset" value="Reset" />	
-		</form>							
-	</div>
-</div>
-
-#{/if}	
