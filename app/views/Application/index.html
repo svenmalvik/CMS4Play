@@ -3,40 +3,17 @@
 
 <div class="wrapper">
 
-	<div id="main-nav">
-		
-		<ul>
-			<li>
-				<a href="index.html">Startseite</a>
-			</li>
-			#{list items:mainmenu, as:'mainmenu'}
-				<li>
-					<a href="${mainmenu.url}.html">${mainmenu.title}</a>
-				</li>
-			#{/list}		
-		</ul>
-	</div>
+	#{menu_level0 mainmenu /}
 	
 	<div id="basic-content" class="content-area">
 		<div class="main-content">
-			<div class="left-menu"> 
-				#{list items:submenu, as:'submenu'}
-					<ul>
-						<li>
-							<a href="${submenu.url}.html">${submenu.title}</a>
-						</li>
-					</ul>
-				#{/list}			
-			</div>
+			#{menu_level1 submenu /}
 			
 			<div id="main-area">
-				<div class="content">
-					#{verbatim}
-					    ${content.content}
-					#{/verbatim}	
-				</div>	
+				#{content content /}
 			</div>
 
 		</div>
 	</div>
 </div>
+

@@ -1,0 +1,12 @@
+<div id="main-nav">
+	<ul>
+		<li>
+			<a href="index.html">Startseite</a>
+		</li>
+		#{list items:_arg, as:'mainmenu'}
+			<li>
+				<a href="${mainmenu.url}.html">${mainmenu.title}</a>
+			</li>
+		#{/list}		
+	</ul>
+</div>
