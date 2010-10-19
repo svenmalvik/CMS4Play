@@ -19,19 +19,12 @@ import play.mvc.Controller;
 public class Application extends Controller {
 
 	public static void index() {
-		Page page = null;
-		List<Page> submenu = null;
 		String url = params.get("url");
-		boolean cms = StringUtils.equals(params.get("cms"), "1") ? true : false;
 		List<Page> pathToPage = Menu.getInstance().getPathToPageFromUrl(url);
 		
-		// Menu Level 0-n
-		Map<String, List<Page>> menu = Menu.getInstance().getMenu();
-		
-		// Mainmenu Level0
-		List<Page> mainmenu = Menu.getInstance().getSubmenuForUrl(URL_INDEX);
-		
 		// Submenu Level 1
+		List<Page> submenu = null;
+		String pageUrl = "";
 		if (StringUtils.isNotEmpty(url) && !StringUtils.equals(URL_INDEX, url)) {
 			if (pathToPage != null) {
 				submenu = Menu.getInstance().getSubmenuForUrl(pathToPage.get(0).url);
@@ -39,23 +32,28 @@ public class Application extends Controller {
 			} else {
 				submenu = Menu.getInstance().getSubmenuForUrl(url);
 			}
-			page = Page.getPageFromUrl(url);
-	    	
+			pageUrl = url;
 	    	
 		} else {
 			submenu = new ArrayList<Page>();
-			page = Page.getPageFromUrl(URL_INDEX);
-			
+			pageUrl = URL_INDEX;
 		}
+		Page page = Page.getPageFromUrl(pageUrl);
+		Map<String, List<Page>> menu = Menu.getInstance().getMenu();
+		Content content = getContent(page);
+		List<Page> mainmenu = Menu.getInstance().getSubmenuForUrl(URL_INDEX);
+		boolean cms = StringUtils.equals(params.get("cms"), "1") ? true : false;
+		render(page, menu, mainmenu, submenu, pathToPage, content, cms);
+    }
+
+	private static Content getContent(Page page) {
 		Content2PageMapping c2p = Content2PageMapping.getFirstC2PFromPage(page);
 		if (c2p == null) {
 			Content content = new Content("").save();
 			c2p = new Content2PageMapping(content, page).save();
 		}
-		Content content = Content.findById(c2p.content.id);
-		
-		render(page, menu, mainmenu, submenu, pathToPage, content, cms);
-    }
+		return Content.findById(c2p.content.id);
+	}
 	
 	public static void cms(Long contentId, String content) {
 		Content _content = Content.findById(contentId);

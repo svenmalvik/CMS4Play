@@ -25,7 +25,7 @@ body {
 	margin:10px;
 }
 #main-nav li {
-	background:url("http://www.tieto.com/tieto-images/arrow_right.gif") no-repeat scroll right center transparent;
+	background:url("/public/images/arrow_right.gif") no-repeat scroll right center transparent;
 	display:block;
 	float:left;
 	padding:0 14px;
@@ -35,7 +35,7 @@ body {
 
 #basic-content.content-area  {
 	color:#5E5E5E;
-	background:url("http://www.tieto.com/tieto-images/tieto_logo2.gif") no-repeat scroll right bottom #FFFFFF;
+	background:url("/public/images/tieto_logo2.gif") no-repeat scroll right bottom #FFFFFF;
 	border-bottom:1px solid #99CC33;
 	border-top:1px solid #99CC33;
 	float: left;
@@ -62,7 +62,6 @@ body {
 	width:770px;
 }
 .main-content #main-area {
-	background:url("../tieto-images/img_forest.gif") no-repeat scroll left bottom transparent;
 	float:left;
 	height:360px;
 	text-align:left;
