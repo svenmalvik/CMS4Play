@@ -20,7 +20,7 @@ public class Bootstrap extends Job {
 		//Fixtures.load("data.yml");
 
 		Page pHome = new Page("Home", "index").save();
-    	Page pBud = new Page("10 Bud", "bud").save();
+    	Page pCommandments = new Page("10 Commandments", "commandments").save();
     	Page pKanban = new Page("Kanban", "kanban").save();
     	Page pKanbanVis = new Page("Visualizing", "kanban_visualizing").save();
     	Page pKanbanMeasure = new Page("Measuring", "kanban_measuring").save();
@@ -34,12 +34,14 @@ public class Bootstrap extends Job {
     	Page pScrumDailystandup = new Page("Daily Stand up", "scrum_dailystandup").save();
     	Page pScrumSprintburndownchart = new Page("Sprint Burndown Chart", "scrum_sprintburndownchart").save();
     	Page pScrumSpike = new Page("Spike", "spike").save();
-    	Page pJira = new Page("Jira", "jira").save();
+    	Page pCode = new Page("Code reviewing", "code").save();
+    	Page pDod = new Page("Definition of Done", "dod").save();
     	
-		pHome.addPage(pBud);
+		pHome.addPage(pCommandments);
 		pHome.addPage(pKanban);
 		pHome.addPage(pScrum);
-		pHome.addPage(pJira);
+		pHome.addPage(pDod);
+		pHome.addPage(pCode);
 		// Get rid of param <isMenuLevel2>
 		pKanban.addPage(pKanbanVis, true);
 		pKanban.addPage(pKanbanMeasure, true);

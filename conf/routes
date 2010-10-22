@@ -3,6 +3,9 @@
 # ~~~~
 
 # Home page
+GET		/cms									Application.cms
+GET		/cms/									Application.cms
+GET		/cms/{url}.html							Application.cms
 GET     /                                       Application.index
 GET     /{url}.html                             Application.index
 

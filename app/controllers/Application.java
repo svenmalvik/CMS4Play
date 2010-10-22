@@ -20,6 +20,11 @@ public class Application extends Controller {
 
 	public static void index() {
 		String url = params.get("url");
+		if (flash.contains("url")) {
+			url = flash.get("url");
+		}
+
+		System.out.println(url);
 		List<Page> pathToPage = Menu.getInstance().getPathToPageFromUrl(url);
 		
 		// Submenu Level 1
@@ -42,7 +47,7 @@ public class Application extends Controller {
 		Map<String, List<Page>> menu = Menu.getInstance().getMenu();
 		Content content = getContent(page);
 		List<Page> mainmenu = Menu.getInstance().getSubmenuForUrl(URL_INDEX);
-		boolean cms = StringUtils.equals(params.get("cms"), "1") ? true : false;
+		boolean cms = flash.contains("cms");
 		render(page, menu, mainmenu, submenu, pathToPage, content, cms);
     }
 
@@ -55,7 +60,13 @@ public class Application extends Controller {
 		return Content.findById(c2p.content.id);
 	}
 	
-	public static void cms(Long contentId, String content) {
+	public static void cms() {
+		flash("cms", "1");
+		if (params.get("url") != null) flash("url", params.get("url"));
+		redirect("Application.index");
+	}
+	
+	public static void save(Long contentId, String content) {
 		Content _content = Content.findById(contentId);
 		_content.content = content;
 		_content.modifiedAt = new Date();

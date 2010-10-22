@@ -19,6 +19,7 @@ body {
 }
 #main-nav {
 	width:960px;
+	height: 35px;
 }
 #main-nav ul {
 	float:left;
@@ -77,6 +78,18 @@ body {
 	padding: 10px 10px 10px 0;
 	margin: 10px 10px 0 0px;
 }
+#basic-content.content-area #main-area h2 {
+	color: #5E5E5E;
+	padding: 10px 10px 0px 0;
+	margin: 10px 10px 0 0px;
+}
+h1, h2, h3, p {
+	line-height: 1.3em;	
+}
+
+.main-content #main-area .content p, .main-content #main-area .content ul, .main-content #main-area .content ol {
+	margin-bottom: 10px;
+}
 .main-content #main-area .content {
 	height: auto;
 	min-height: 239px;
@@ -88,7 +101,11 @@ body {
 	width:510px;
 }
 ol, ul {
-	list-style:none outside none;
+	list-style: outside;
+}
+#basic-content.content-area .content ol, #basic-content.content-area .content ul {
+	list-style: outside;
+	padding-left: 18px;
 }
 #basic-content.content-area li {
 	padding-bottom:4px;
