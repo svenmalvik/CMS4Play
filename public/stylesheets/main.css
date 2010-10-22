@@ -86,7 +86,9 @@ body {
 h1, h2, h3, p {
 	line-height: 1.3em;	
 }
-
+#basic-content.content-area .content p {
+	line-height: 1.3em;		
+}
 .main-content #main-area .content p, .main-content #main-area .content ul, .main-content #main-area .content ol {
 	margin-bottom: 10px;
 }
@@ -100,11 +102,13 @@ h1, h2, h3, p {
 	padding:10px 10px 20px 30px;
 	width:510px;
 }
-ol, ul {
+
+#basic-content.content-area .content ul {
 	list-style: outside;
+	padding-left: 18px;
 }
-#basic-content.content-area .content ol, #basic-content.content-area .content ul {
-	list-style: outside;
+#basic-content.content-area .content ol {
+	list-style: decimal;
 	padding-left: 18px;
 }
 #basic-content.content-area li {
@@ -119,6 +123,7 @@ select, input, li, textarea {
 }
 #basic-content.content-area .left-menu ul {
 	padding:10px 20px 10px 10px;
+	list-style: none;
 }
 a {
 	color:#5E5E5E;
