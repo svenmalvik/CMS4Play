@@ -19,37 +19,35 @@ import play.mvc.Controller;
 public class Application extends Controller {
 
 	public static void index() {
-		String url = params.get("url");
-		if (flash.contains("url")) {
-			url = flash.get("url");
-		}
-
-		System.out.println(url);
+		String url = getUrl();
 		List<Page> pathToPage = Menu.getInstance().getPathToPageFromUrl(url);
-		
-		// Submenu Level 1
-		List<Page> submenu = null;
-		String pageUrl = "";
-		if (StringUtils.isNotEmpty(url) && !StringUtils.equals(URL_INDEX, url)) {
-			if (pathToPage != null) {
-				submenu = Menu.getInstance().getSubmenuForUrl(pathToPage.get(0).url);
-				
-			} else {
-				submenu = Menu.getInstance().getSubmenuForUrl(url);
-			}
-			pageUrl = url;
-	    	
-		} else {
-			submenu = new ArrayList<Page>();
-			pageUrl = URL_INDEX;
-		}
+		List<Page> submenu = isNotIndexPage(url) ? getSubmenu(pathToPage) : new ArrayList<Page>();
+		String pageUrl = isNotIndexPage(url) ? url : URL_INDEX;
 		Page page = Page.getPageFromUrl(pageUrl);
 		Map<String, List<Page>> menu = Menu.getInstance().getMenu();
 		Content content = getContent(page);
 		List<Page> mainmenu = Menu.getInstance().getSubmenuForUrl(URL_INDEX);
 		boolean cms = flash.contains("cms");
-		render(page, menu, mainmenu, submenu, pathToPage, content, cms);
-    }
+		render(page, menu, mainmenu, submenu, pathToPage, content, cms, url);
+	}
+
+	private static List<Page> getSubmenu(List<Page> pathToPage) {
+		String subMenuUrl = (pathToPage != null) ? pathToPage.get(0).url : getUrl();
+		return Menu.getInstance().getSubmenuForUrl(subMenuUrl);
+	}
+
+	private static boolean isNotIndexPage(String url) {
+		return StringUtils.isNotEmpty(url)
+				&& !StringUtils.equals(URL_INDEX, url);
+	}
+
+	private static String getUrl() {
+		String url = params.get("url");
+		if (flash.contains("url")) {
+			url = flash.get("url");
+		}
+		return url;
+	}
 
 	private static Content getContent(Page page) {
 		Content2PageMapping c2p = Content2PageMapping.getFirstC2PFromPage(page);
@@ -59,19 +57,19 @@ public class Application extends Controller {
 		}
 		return Content.findById(c2p.content.id);
 	}
-	
+
 	public static void cms() {
 		flash("cms", "1");
 		if (params.get("url") != null) flash("url", params.get("url"));
 		redirect("Application.index");
 	}
-	
-	public static void save(Long contentId, String content) {
-		Content _content = Content.findById(contentId);
-		_content.content = content;
-		_content.modifiedAt = new Date();
-		_content.save();
 
-		index();
+	public static void save(Long contentId, String content, String url) {
+		Content.updateContent(contentId, content);
+
+		flash("url", url);
+		redirect("Application.index");
 	}
+
+
 }

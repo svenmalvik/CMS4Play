@@ -42,7 +42,6 @@ public class Bootstrap extends Job {
 		pHome.addPage(pScrum);
 		pHome.addPage(pDod);
 		pHome.addPage(pCode);
-		// Get rid of param <isMenuLevel2>
 		pKanban.addPage(pKanbanVis, true);
 		pKanban.addPage(pKanbanMeasure, true);
 		pScrum.addPage(pScrumBacklog, true);

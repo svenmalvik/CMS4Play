@@ -27,4 +27,11 @@ public class Content extends Model {
 	public Content() {
 		new Content("");
 	}
+	
+	public static void updateContent(Long contentId, String content) {
+		Content _content = Content.findById(contentId);
+		_content.content = content;
+		_content.modifiedAt = new Date();
+		_content.save();
+	}
 }
