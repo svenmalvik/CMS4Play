@@ -29,9 +29,14 @@
 		<script type="text/javascript">
             function edit() {
             	if (event.keyCode == 17) {
+<<<<<<< HEAD
             		$(".edit").css("display","block");
             	}
             	
+=======
+            		document.getElementById("edit").style.backgroundColor = "#ff0000";
+            	}
+>>>>>>> 72a17311a73658f40f962921bd3f04dda8a193bc
             }
 	     </script>	
         
@@ -43,7 +48,11 @@
 		<div id="popup"></div>
 		<div id="window">
 			<div id="cms">
+<<<<<<< HEAD
 				<a href="/${url}.html">Close</a>
+=======
+				<a href="/">Close</a>
+>>>>>>> 72a17311a73658f40f962921bd3f04dda8a193bc
 				<form method="post" action="@{Application.save(content.id)}">
 					<textarea name="content" style="width: 100%; height: 200px;">
 						${content.content}
