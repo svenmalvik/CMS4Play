@@ -12,19 +12,15 @@ body {
 	word-spacing:normal;
 }
 .edit {
-<<<<<<< HEAD
 	display: none;	
 	text-align: right;
 }
 .edit a {
 	color: #aaaaaa;	
-=======
 	text-align: right;	
 }
 .edit a {
 	color: #cccccc;	
-	
->>>>>>> 72a17311a73658f40f962921bd3f04dda8a193bc
 }
 .wrapper {
 	margin:0 auto;
