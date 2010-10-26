@@ -25,9 +25,17 @@
 			</script>
 			<!-- /TinyMCE -->
 		#{/if}
+		
+		<script type="text/javascript">
+            function edit() {
+            	if (event.keyCode == 17) {
+            		document.getElementById("edit").style.backgroundColor = "#ff0000";
+            	}
+            }
+	     </script>	
         
     </head>
-    <body>
+    <body onkeydown="edit()">
         #{doLayout /}
         
 		#{if cms}

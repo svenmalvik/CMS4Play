@@ -11,7 +11,13 @@ body {
 	text-decoration:none;
 	word-spacing:normal;
 }
-
+.edit {
+	text-align: right;	
+}
+.edit a {
+	color: #cccccc;	
+	
+}
 .wrapper {
 	margin:0 auto;
 	padding:0;

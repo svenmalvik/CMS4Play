@@ -18,6 +18,8 @@ import play.mvc.Controller;
 
 public class Application extends Controller {
 
+	private static final String EXT_HTML = ".html";
+
 	public static void index() {
 		String url = getUrl();
 		List<Page> pathToPage = Menu.getInstance().getPathToPageFromUrl(url);
@@ -66,10 +68,6 @@ public class Application extends Controller {
 
 	public static void save(Long contentId, String content, String url) {
 		Content.updateContent(contentId, content);
-
-		flash("url", url);
-		redirect("Application.index");
+		redirect("/" + url + EXT_HTML);
 	}
-
-
 }
