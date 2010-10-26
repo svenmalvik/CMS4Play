@@ -48,6 +48,9 @@ public class Application extends Controller {
 		if (flash.contains("url")) {
 			url = flash.get("url");
 		}
+		if (StringUtils.isEmpty(url)) {
+			url = URL_INDEX;
+		}
 		return url;
 	}
 
@@ -66,8 +69,8 @@ public class Application extends Controller {
 		redirect("Application.index");
 	}
 
-	public static void save(Long contentId, String content, String url) {
+	public static void save(Long contentId, String content, String callingUrl) {
 		Content.updateContent(contentId, content);
-		redirect("/" + url + EXT_HTML);
+		redirect("/" + callingUrl + EXT_HTML);
 	}
 }
