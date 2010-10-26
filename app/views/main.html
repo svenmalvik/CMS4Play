@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>#{get 'title' /}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" type="text/css" media="screen" href="@{'/public/stylesheets/main.css'}">
+        #{get 'moreStyles' /}
+        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.jpg'}">
+        <script src="@{'/public/javascripts/jquery-1.4.2.min.js'}" type="text/javascript" charset="utf-8"></script>
+        #{get 'moreScripts' /}
+        
+        #{if cms}
+			<!-- TinyMCE -->
+			<script src="@{'/public/jscripts/tiny_mce/tiny_mce.js'}" type="text/javascript" charset="utf-8"></script>
+			<script type="text/javascript">
+				tinyMCE.init({
+					mode : "textareas",
+					theme : "advanced",
+					theme_advanced_toolbar_location : "top",
+					theme_advanced_resizing : true,
+					theme_advanced_toolbar_align : "left",
+					theme_advanced_statusbar_location : "bottom"
+				});
+			</script>
+			<!-- /TinyMCE -->
+		#{/if}
+		
+		<script type="text/javascript">
+            function edit() {
+            	if (event.keyCode == 17) {
+            		$(".edit").css("display","block");
+            	}
+            	
+            }
+	     </script>	
+        
+    </head>
+    <body onkeydown="edit()">
+        #{doLayout /}
+        
+		#{if cms}
+		<div id="popup"></div>
+		<div id="window">
+			<div id="cms">
+				<a href="/${url}.html">Close</a>
+				<form method="post" action="@{Application.save(content.id)}">
+					<textarea name="content" style="width: 100%; height: 200px;">
+						${content.content}
+					</textarea>
+					<br />
+					<input type="hidden" name="url" value="${url}" />
+					<input type="submit" name="save" value="Submit" />
+					<input type="reset" name="reset" value="Reset" />	
+				</form>							
+			</div>
+		</div>
+		#{/if}	
+		        
+    </body>
+</html>

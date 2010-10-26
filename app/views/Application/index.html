@@ -1,0 +1,19 @@
+#{extends 'main.html' /}
+#{set title:page.title /}
+
+<div class="wrapper">
+
+	#{menu_level0 mainmenu /}
+	
+	<div id="basic-content" class="content-area">
+		<div class="main-content">
+			#{menu_level1 submenu /}
+			
+			<div id="main-area">
+				#{content content:content, url:url /}
+			</div>
+
+		</div>
+	</div>
+</div>
+
