@@ -14,6 +14,7 @@ public class ContentTest extends UnitTest {
 
     @Before
     public void setup() {
+    	new TestData();
     }  
     
     @Test
@@ -28,7 +29,11 @@ public class ContentTest extends UnitTest {
     
     @Test
     public void addPageToHome() {
+    	Page subPage = new Page("New page", "new_page").save();
+    	Page.getPageFromUrl(URL_INDEX).addPage(subPage);
     	
+		List<Page> submenu = Menu.getInstance().getSubmenuForUrl(URL_INDEX);
+		assertEquals(6, submenu.size());
     }
     
     @Test

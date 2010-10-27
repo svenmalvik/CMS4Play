@@ -2,12 +2,14 @@ package models;
 
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Transient;
 
-import play.data.binding.NoBinding;
+import org.apache.commons.lang.StringUtils;
+
 import play.db.jpa.Model;
 
 @Entity
@@ -15,8 +17,6 @@ public class Page extends Model {
 
 	public String title;
 	public String url;
-	@Transient
-	private List<Page> subPages;
 
 	public Page(String title, String url) {
 		super();
@@ -53,17 +53,12 @@ public class Page extends Model {
 
 	private void addSubPage(Page subPage) {
 		createSubmenuIfNotExistYet();
-    	subPages.add(subPage);
+		Menu.getInstance().getSubmenuForUrl(url).add(subPage);
 	}
 
 	private void createSubmenuIfNotExistYet() {
-		if (subPages == null) {
-    		subPages = new ArrayList<Page>();
-    		addSubpages2Menu();
+		if (Menu.getInstance().getSubmenuForUrl(url) == null) {
+			Menu.getInstance().addSubpages(url, new ArrayList<Page>());
     	}
-	}
-
-	private void addSubpages2Menu() {
-		Menu.getInstance().getMenu().put(url, subPages);
 	}
 }

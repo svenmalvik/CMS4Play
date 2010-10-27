@@ -25,6 +25,11 @@ public class Menu {
 		}
 	}
 	
+	public static void reset() {
+		menu = null;
+		getInstance();
+	}
+	
 	private void createPagePathes() {
 		pathToPage = new HashMap<String, List<Page>>();
 	}
@@ -51,5 +56,9 @@ public class Menu {
 
 	public List<Page> getPathToPageFromUrl(String url) {
 		return pathToPage.get(url);
+	}
+
+	public void addSubpages(String url, List<Page> subPages) {
+		_menu.put(url, subPages);
 	}
 }
