@@ -1,50 +1,62 @@
+import static models.Menu.URL_INDEX;
+
 import java.util.List;
 
-import models.Content;
-import models.Content2PageMapping;
 import models.Menu;
 import models.Page;
-import static models.Menu.*;
 
-import org.junit.BeforeClass;
+import org.junit.Before;
 import org.junit.Test;
 
 import play.test.UnitTest;
 
 public class ContentTest extends UnitTest {
 
-    @BeforeClass
-    public static void setup() {
-        //Fixtures.deleteAll();
-        //Fixtures.load("data.yml");
+    @Before
+    public void setup() {
     }  
     
     @Test
-    public void content() {
-        List<Content> contents = Content.findAll();
-        Content content = contents.get(0);
-        assertEquals("Dies ist ein Startseite", content.content);
+    public void deletePage() {
+    	Page page = Page.getPageFromUrl("kanban_measuring");
+        assertNotNull(page);
+        page.delete();
+        
+        Page pageDeleted = Page.getPageFromUrl("kanban_measuring");
+        assertNull(pageDeleted);
+    }
+    
+    @Test
+    public void addPageToHome() {
+    	
+    }
+    
+    @Test
+    public void addPageToASubpage() {
+    	
     }
     
     @Test
     public void page() {
-    	assertEquals(Page.findAll().size(), 4);
-    	Page page2 = Page.getPageFromUrl(URL_INDEX);
-        assertNotNull(page2);
-    }
-    
-    @Test
-    public void c2p() {
-    	Page page = Page.getPageFromUrl("startseite");
-    	assertEquals(Content2PageMapping.findAll().size(), 3);
-    	Content2PageMapping c2p = Content2PageMapping.getFirstC2PFromPage(page);
-    	assertNotNull(c2p);
-    	assertNotNull(c2p.content);
+    	assertEquals(17, Page.findAll().size());
+    	Page page = Page.getPageFromUrl(URL_INDEX);
+        assertNotNull(page);
+        assertEquals("Home", page.title);
     }
 
+    @Test
     public void menu() {
 		Page indexPage = Page.getPageFromUrl(URL_INDEX);
 		List<Page> submenu = Menu.getInstance().getSubmenuForUrl(indexPage.url);
-		assertEquals(2, submenu.size());
+		assertEquals(5, submenu.size());
+	}
+    
+    @Test
+    public void editPageTitle() {
+    	Page page = Page.getPageFromUrl(URL_INDEX);
+    	page.title = "Home changed";
+    	page.save();
+    	Page pageChanged = Page.getPageFromUrl(URL_INDEX);
+    	assertEquals(page.title, pageChanged.title);
 	}
 }
