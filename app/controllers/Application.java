@@ -26,11 +26,10 @@ public class Application extends Controller {
 		List<Page> submenu = isNotIndexPage(url) ? getSubmenu(pathToPage) : new ArrayList<Page>();
 		String pageUrl = isNotIndexPage(url) ? url : URL_INDEX;
 		Page page = Page.getPageFromUrl(pageUrl);
-		Map<String, List<Page>> menu = Menu.getInstance().getMenu();
 		Content content = getContent(page);
 		List<Page> mainmenu = Menu.getInstance().getSubmenuForUrl(URL_INDEX);
 		boolean cms = flash.contains("cms");
-		render(page, menu, mainmenu, submenu, pathToPage, content, cms, url);
+		render(page, mainmenu, submenu, pathToPage, content, cms, url);
 	}
 
 	private static List<Page> getSubmenu(List<Page> pathToPage) {

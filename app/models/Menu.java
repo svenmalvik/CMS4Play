@@ -1,8 +1,11 @@
 package models;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import play.Logger;
 
 public class Menu {
 
@@ -38,10 +41,6 @@ public class Menu {
 		return pathToPage;
 	}
 
-	public Map<String, List<Page>> getMenu() {
-		return _menu;
-	}
-
 	private void createMenu() {
 		_menu = new HashMap<String, List<Page>>();
 	}
@@ -51,7 +50,12 @@ public class Menu {
 	}
 	
 	public List<Page> getSubmenuForUrl(String url) {
-		return _menu.get(url);
+		List<Page> submenu = _menu.get(url);
+		if (submenu != null) {
+			Collections.sort(submenu, new MenuSorter());
+			Logger.debug(">>>>> Get submenu for url: %s; size:%s", url, submenu.size());
+		}
+		return submenu;
 	}
 
 	public List<Page> getPathToPageFromUrl(String url) {
@@ -60,5 +64,9 @@ public class Menu {
 
 	public void addSubpages(String url, List<Page> subPages) {
 		_menu.put(url, subPages);
+	}
+
+	public int getPagePosition(Page pageFromUrl) {
+		return 0;
 	}
 }

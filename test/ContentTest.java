@@ -37,8 +37,9 @@ public class ContentTest extends UnitTest {
     }
     
     @Test
-    public void addPageToASubpage() {
-    	
+    public void isScrumPageAtSecondPosition() {
+    	Page scrum = Menu.getInstance().getSubmenuForUrl(URL_INDEX).get(1);
+    	assertEquals("scrum", scrum.url);
     }
     
     @Test

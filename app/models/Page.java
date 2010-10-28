@@ -10,6 +10,7 @@ import javax.persistence.Transient;
 
 import org.apache.commons.lang.StringUtils;
 
+import play.Logger;
 import play.db.jpa.Model;
 
 @Entity
@@ -19,7 +20,6 @@ public class Page extends Model {
 	public String url;
 
 	public Page(String title, String url) {
-		super();
 		this.title = title;
 		this.url = url;
 	}

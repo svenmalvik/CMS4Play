@@ -10,8 +10,6 @@ public class TestData {
 	}
 	
 	private void loadTestdata() {
-		//Fixtures.load("data.yml");
-
 		Page pHome = new Page("Home", "index").save();
     	Page pCommandments = new Page("10 Commandments", "commandments").save();
     	Page pKanban = new Page("Kanban", "kanban").save();
