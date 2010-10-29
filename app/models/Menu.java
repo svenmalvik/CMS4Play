@@ -72,4 +72,9 @@ public class Menu {
 	public void addSubpages(String url, List<Page> subPages) {
 		_menu.put(url, subPages);
 	}
+
+	public static void update() {
+		Menu.reset();
+		Menu.getInstance().createMenu();
+	}
 }

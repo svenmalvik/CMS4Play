@@ -13,11 +13,11 @@ body {
 }
 .edit {
 	display: none;	
-	text-align: right;
+	text-align: left;
 }
 .edit a {
 	color: #aaaaaa;	
-	text-align: right;	
+	text-align: left;	
 }
 .edit a {
 	color: #cccccc;	
@@ -125,7 +125,7 @@ h1, h2, h3, p {
 	padding-bottom:4px;
 }
 .main-content .left-menu ul li {
-	padding:4px 0;
+	padding:15px 0;
 }
 select, input, li, textarea {
 	font-family:Helvetica,Arial,sans-serif;

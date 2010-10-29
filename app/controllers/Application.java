@@ -14,6 +14,7 @@ import models.Page;
 
 import org.apache.commons.lang.StringUtils;
 
+import play.Logger;
 import play.mvc.Controller;
 
 public class Application extends Controller {
@@ -29,7 +30,8 @@ public class Application extends Controller {
 		Content content = getContent(page);
 		List<Page> mainmenu = Menu.getInstance().getSubmenuForUrl(URL_INDEX);
 		boolean cms = flash.contains("cms");
-		render(page, mainmenu, submenu, pathToPage, content, cms, url);
+		String edit = flash.get("edit");
+		render(page, mainmenu, submenu, pathToPage, content, cms, url, edit);
 	}
 
 	private static List<Page> getSubmenu(List<Page> pathToPage) {
@@ -63,13 +65,27 @@ public class Application extends Controller {
 	}
 
 	public static void cms() {
-		flash("cms", "1");
-		if (params.get("url") != null) flash("url", params.get("url"));
+		String editType = params.get("edit");
+		
+		if (StringUtils.isNotEmpty(editType)) {
+			flash("cms", "1");
+			flash("edit", editType);
+			if (params.get("url") != null) flash("url", params.get("url"));
+		}
 		redirect("Application.index");
 	}
+	
+	public static void savePage(String alias, String title, String url) {
+		Page page = Page.getPageFromUrl(url);
+		page.title = title;
+		//page.url = alias;
+		page.save();
+		Menu.update();
+		redirect("/" + url + EXT_HTML);
+	}	
 
-	public static void save(Long contentId, String content, String callingUrl) {
+	public static void saveContent(Long contentId, String content, String url) {
 		Content.updateContent(contentId, content);
-		redirect("/" + callingUrl + EXT_HTML);
+		redirect("/" + url + EXT_HTML);
 	}
 }

@@ -1,9 +1,12 @@
 <div class="left-menu"> 
-	#{list items:_arg, as:'submenu'}
-		<ul>
+	<ul>
+		#{list items:_submenu, as:'submenu'}
 			<li>
 				<a href="${submenu.url}.html">${submenu.title}</a>
 			</li>
-		</ul>
-	#{/list}			
+		#{/list}	
+		<li class="edit">
+			<a class="edit" href="/cms/${_url}.html?edit=menu">EDIT MENU</a>
+		</li>
+	</ul>
 </div>

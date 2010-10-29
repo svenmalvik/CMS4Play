@@ -72,4 +72,8 @@ public class Page extends Model {
 			Menu.getInstance().addSubpages(url, new ArrayList<Page>());
     	}
 	}
+	
+	public String toString() {
+		return "Title:" + title + " Url:" + url;
+	}
 }

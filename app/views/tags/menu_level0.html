@@ -1,9 +1,16 @@
 <div id="main-nav">
 	<ul>
-		#{list items:_arg, as:'mainmenu'}
+		#{list items:_mainmenu, as:'mainmenu'}
 			<li>
 				<a href="${mainmenu.url}.html">${mainmenu.title}</a>
 			</li>
-		#{/list}		
+		#{/list}	
+		
+		<li class="edit">
+			<a class="edit" href="/cms/${_url}.html?edit=menu">EDIT MENU</a>
+		</li>	
+		<li class="edit">
+			<a class="edit" href="/cms/${_url}.html?edit=page">EDIT PAGE</a>
+		</li>			
 	</ul>
 </div>
