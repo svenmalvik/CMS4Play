@@ -29,11 +29,12 @@ public class ContentTest extends UnitTest {
     
     @Test
     public void addPageToHome() {
-    	Page subPage = new Page("New page", "new_page").save();
+    	Page subPage = new Page("New page", "new_page", URL_INDEX, 0);
     	Page.getPageFromUrl(URL_INDEX).addPage(subPage);
     	
 		List<Page> submenu = Menu.getInstance().getSubmenuForUrl(URL_INDEX);
-		assertEquals(6, submenu.size());
+		assertEquals(7, submenu.size());
+		subPage.delete();
     }
     
     @Test
@@ -54,7 +55,7 @@ public class ContentTest extends UnitTest {
     public void menu() {
 		Page indexPage = Page.getPageFromUrl(URL_INDEX);
 		List<Page> submenu = Menu.getInstance().getSubmenuForUrl(indexPage.url);
-		assertEquals(5, submenu.size());
+		assertEquals(6, submenu.size());
 	}
     
     @Test
@@ -64,5 +65,7 @@ public class ContentTest extends UnitTest {
     	page.save();
     	Page pageChanged = Page.getPageFromUrl(URL_INDEX);
     	assertEquals(page.title, pageChanged.title);
+    	page.title = "Home";
+    	page.save();    	
 	}
 }

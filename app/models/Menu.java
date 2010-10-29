@@ -2,8 +2,11 @@ package models;
 
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+
+import org.apache.commons.lang.StringUtils;
 
 import play.Logger;
 
@@ -23,7 +26,7 @@ public class Menu {
 	
 	private Menu() {
 		if (isMenuNotBuildYet()) {
-			createMenu();
+			_menu = new HashMap<String, List<Page>>();
 			createPagePathes();
 		}
 	}
@@ -41,8 +44,13 @@ public class Menu {
 		return pathToPage;
 	}
 
-	private void createMenu() {
-		_menu = new HashMap<String, List<Page>>();
+	public void createMenu() {
+		List<Page> pages = Page.findAll();
+		Iterator<Page> iter = pages.iterator();
+		while (iter.hasNext()) {
+			Page page = (Page) iter.next();
+			Page.getPageFromUrl(page.parentPageUrl).addPage(page);
+		}
 	}
 
 	private boolean isMenuNotBuildYet() {
@@ -53,7 +61,6 @@ public class Menu {
 		List<Page> submenu = _menu.get(url);
 		if (submenu != null) {
 			Collections.sort(submenu, new MenuSorter());
-			Logger.debug(">>>>> Get submenu for url: %s; size:%s", url, submenu.size());
 		}
 		return submenu;
 	}
@@ -64,9 +71,5 @@ public class Menu {
 
 	public void addSubpages(String url, List<Page> subPages) {
 		_menu.put(url, subPages);
-	}
-
-	public int getPagePosition(Page pageFromUrl) {
-		return 0;
 	}
 }

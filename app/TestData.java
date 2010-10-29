@@ -10,39 +10,24 @@ public class TestData {
 	}
 	
 	private void loadTestdata() {
-		Page pHome = new Page("Home", "index").save();
-    	Page pCommandments = new Page("10 Commandments", "commandments").save();
-    	Page pKanban = new Page("Kanban", "kanban").save();
-    	Page pKanbanVis = new Page("Visualizing", "kanban_visualizing").save();
-    	Page pKanbanMeasure = new Page("Measuring", "kanban_measuring").save();
-    	Page pScrum = new Page("Scrum", "scrum").save();
-    	Page pScrumBacklog = new Page("Backlog", "scrum_backlog").save();
-    	Page pScrumTaskboard = new Page("Task Board", "scrum_taskboard").save();
-    	Page pScrumTeamlookahead = new Page("TeamLookAhead", "scrum_teanlookahaed").save();
-    	Page pScrumSprintplanning = new Page("Sprint Planning", "scrum_sprintplanning").save();
-    	Page pScrumSprintdemo = new Page("Sprint Demo", "scrum_sprintdemo").save();
-    	Page pScrumRetrospect = new Page("Retrospect", "scrum_retrospect").save();
-    	Page pScrumDailystandup = new Page("Daily Stand up", "scrum_dailystandup").save();
-    	Page pScrumSprintburndownchart = new Page("Sprint Burndown Chart", "scrum_sprintburndownchart").save();
-    	Page pScrumSpike = new Page("Spike", "spike").save();
-    	Page pCode = new Page("Code reviewing", "code").save();
-    	Page pDod = new Page("Definition of Done", "dod").save();
+		new Page("Home", "index", "index", 0);
+    	new Page("10 Commandments", "commandments", "index", 2);
+    	new Page("Kanban", "kanban", "index", 3);
+    	new Page("Visualizing", "kanban_visualizing", "kanban", 1);
+    	new Page("Measuring", "kanban_measuring", "kanban", 0);
+    	new Page("Scrum", "scrum", "index", 1);
+    	new Page("Backlog", "scrum_backlog", "scrum", 0);
+    	new Page("Task Board", "scrum_taskboard", "scrum", 1);
+    	new Page("TeamLookAhead", "scrum_teanlookahaed", "scrum", 2);
+    	new Page("Sprint Planning", "scrum_sprintplanning", "scrum", 3);
+    	new Page("Sprint Demo", "scrum_sprintdemo", "scrum", 4);
+    	new Page("Retrospect", "scrum_retrospect", "scrum", 5);
+    	new Page("Daily Stand up", "scrum_dailystandup", "scrum", 6);
+    	new Page("Sprint Burndown Chart", "scrum_sprintburndownchart", "scrum", 7);
+    	new Page("Spike", "spike", "scrum", 8);
+    	new Page("Code reviewing", "code", "index", 4);
+    	new Page("Definition of Done", "dod", "index", 5);
     	
-		pHome.addPage(pCommandments);
-		pHome.addPage(pKanban);
-		pHome.addPage(pScrum);
-		pHome.addPage(pDod);
-		pHome.addPage(pCode);
-		pKanban.addPage(pKanbanVis, true);
-		pKanban.addPage(pKanbanMeasure, true);
-		pScrum.addPage(pScrumBacklog, true);
-		pScrum.addPage(pScrumTaskboard, true);
-		pScrum.addPage(pScrumTeamlookahead, true);
-		pScrum.addPage(pScrumSprintplanning, true);
-		pScrum.addPage(pScrumSprintdemo, true);
-		pScrum.addPage(pScrumRetrospect, true);
-		pScrum.addPage(pScrumDailystandup, true);
-		pScrum.addPage(pScrumSprintburndownchart, true);
-		pScrum.addPage(pScrumSpike, true);
+    	Menu.getInstance().createMenu();
 	}
 }

@@ -8,11 +8,7 @@ public class MenuSorter implements Comparator<Page> {
 
 	@Override
 	public int compare(Page page1, Page page2) {
-		return getPosition(page1) - getPosition(page2);
-	}
-
-	private int getPosition(Page page2) {
-		return 0;
+		return page1.positionInMenu - page2.positionInMenu;
 	}
 }
 

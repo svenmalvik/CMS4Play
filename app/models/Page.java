@@ -2,26 +2,30 @@ package models;
 
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import javax.persistence.Entity;
-import javax.persistence.Transient;
 
 import org.apache.commons.lang.StringUtils;
+import org.hibernate.annotations.Index;
 
-import play.Logger;
 import play.db.jpa.Model;
 
 @Entity
 public class Page extends Model {
 
 	public String title;
+	@Index(name="urlx")
 	public String url;
+	public String parentPageUrl;
+	public int positionInMenu;
 
-	public Page(String title, String url) {
+	public Page(String title, String url, String parentPageUrl, int position) {
 		this.title = title;
 		this.url = url;
+		this.parentPageUrl = parentPageUrl;
+		this.positionInMenu = position;
+		save();
 	}
 	
 	public static Page getPageFromUrl(String url) {
@@ -32,17 +36,24 @@ public class Page extends Model {
 		Page page = Page.find("url", url).first();
 		if (page == null) {
 			page = super.save();
+		} else {
+			page.update(this);
 		}
 		return page;
 	}
 	
-	public void addPage(Page subPage) {
-		addPage(subPage, false);
+	private void update(Page newPageAttributes) {
+		title = newPageAttributes.title;
+		parentPageUrl = newPageAttributes.parentPageUrl;
+		positionInMenu = newPageAttributes.positionInMenu;
+		super.save();
 	}
 
-	public void addPage(Page subPage, boolean isMenuLevel2) {
-    	addSubPage(subPage);
-    	if (isMenuLevel2) updateMenu(subPage);    	
+	public void addPage(Page subPage) {
+		addSubPage(subPage);
+		if (!StringUtils.equals(subPage.parentPageUrl, "index")) {
+			updateMenu(subPage);
+		}
 	}
 
 	private void updateMenu(Page subPage) {
