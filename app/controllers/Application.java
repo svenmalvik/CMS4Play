@@ -13,6 +13,7 @@ import models.Menu;
 import models.Page;
 
 import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang.math.RandomUtils;
 
 import play.Logger;
 import play.mvc.Controller;
@@ -67,20 +68,41 @@ public class Application extends Controller {
 
 	public static void cms() {
 		String editType = params.get("edit");
+		String url = params.get("url");
+		
+		if (params._contains("delete")) {
+			deletePage();
+			Menu.update();
+			redirect("Application.index");
+		}	
+		
+		if (params._contains("add")) {
+			Page page = Page.getPageFromUrl(url);
+			String newpageUrl = "newpage" + RandomUtils.nextInt(10);
+			new Page("NEW PAGE", newpageUrl, page.parentPageUrl, Menu.getInstance().getSubmenuForUrl(page.parentPageUrl).size()).save();
+			Menu.update();
+			url = newpageUrl;
+			editType = "page";
+		}
 		
 		if (StringUtils.isNotEmpty(editType)) {
 			flash("cms", "1");
 			flash("edit", editType);
-			if (params.get("url") != null) flash("url", params.get("url"));
+			if (url != null) flash("url", url);
 		}
+		
 		redirect("Application.index");
+	}
+
+	private static void deletePage() {
+		String url = params.get("url");
+		Page.deleteWithC2PMapping(url);
+
 	}
 	
 	public static void savePage(String alias, String title, String parentPage, String url) {
-		Logger.debug("ParentPage:%s", parentPage);
 		Page page = Page.getPageFromUrl(url);
 		page.title = title;
-		Logger.debug("Url:%s : ParentPage:%s", url, parentPage);
 		page.parentPageUrl = StringUtils.equals(parentPage, url) ? page.parentPageUrl : parentPage;
 		page.save();
 		Menu.update();

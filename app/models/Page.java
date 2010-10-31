@@ -55,6 +55,12 @@ public class Page extends Model {
 			updateMenu(subPage);
 		}
 	}
+	
+	public static void deleteWithC2PMapping(String url) {
+		Page page = Page.getPageFromUrl(url);
+		Content2PageMapping.delete("page = ?", page);
+		page.delete("url = ?", url);
+	}
 
 	private void updateMenu(Page subPage) {
 		List<Page> pathSubpage = new ArrayList<Page>();
