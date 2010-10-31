@@ -2,6 +2,8 @@ import static models.Menu.URL_INDEX;
 
 import java.util.List;
 
+import javax.swing.text.html.HTMLDocument.HTMLReader.ParagraphAction;
+
 import models.Menu;
 import models.Page;
 
@@ -49,6 +51,13 @@ public class ContentTest extends UnitTest {
     	Page page = Page.getPageFromUrl(URL_INDEX);
         assertNotNull(page);
         assertEquals("Home", page.title);
+    }
+    
+    @Test
+    public void allPossibleParentPages() {
+    	List<Page> parentPages = Page.getAllPossibleParentPages();
+    	assertEquals(6, parentPages.size());
+    	assertEquals("commandments", parentPages.get(0).url);
     }
 
     @Test

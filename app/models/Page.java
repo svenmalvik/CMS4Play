@@ -76,4 +76,8 @@ public class Page extends Model {
 	public String toString() {
 		return "Title:" + title + " Url:" + url;
 	}
+
+	public static List<Page> getAllPossibleParentPages() {
+		return Page.find("parentPageUrl = ? order by title", "index").fetch();
+	}
 }

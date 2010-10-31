@@ -31,7 +31,8 @@ public class Application extends Controller {
 		List<Page> mainmenu = Menu.getInstance().getSubmenuForUrl(URL_INDEX);
 		boolean cms = flash.contains("cms");
 		String edit = flash.get("edit");
-		render(page, mainmenu, submenu, pathToPage, content, cms, url, edit);
+		List<Page> possParentPages = Page.getAllPossibleParentPages();
+		render(page, mainmenu, submenu, pathToPage, content, cms, url, edit, possParentPages);
 	}
 
 	private static List<Page> getSubmenu(List<Page> pathToPage) {
@@ -75,10 +76,12 @@ public class Application extends Controller {
 		redirect("Application.index");
 	}
 	
-	public static void savePage(String alias, String title, String url) {
+	public static void savePage(String alias, String title, String parentPage, String url) {
+		Logger.debug("ParentPage:%s", parentPage);
 		Page page = Page.getPageFromUrl(url);
 		page.title = title;
-		//page.url = alias;
+		Logger.debug("Url:%s : ParentPage:%s", url, parentPage);
+		page.parentPageUrl = StringUtils.equals(parentPage, url) ? page.parentPageUrl : parentPage;
 		page.save();
 		Menu.update();
 		redirect("/" + url + EXT_HTML);

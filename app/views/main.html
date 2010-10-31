@@ -66,9 +66,21 @@
 			<div id="cms">
 				<a href="/${url}.html">Close</a>
 				<form method="post" action="@{Application.savePage()}">
-					Alias:<br /><input name="alias" style="width: 300px;" value="${page.url}" />
-					<br />
 					Title:<br /><input name="title" style="width: 300px;" value="${page.title}" />
+					<br />
+					<br />
+					ParentPage:
+					<br />
+					<select name="parentPage" id="parentPageSelBox" size="10" >
+						#{list items:possParentPages, as:'possParentPage'}
+							#{if possParentPage.url == page.parentPageUrl}
+								<option value="${possParentPage.url}" selected>${possParentPage.title}</option>
+							#{/if}
+							#{else}
+							    <option value="${possParentPage.url}">${possParentPage.title}</option>
+							#{/else}							
+						#{/list}					
+					</select>					
 					<br />
 					<input type="hidden" name="url" value="${url}" />
 					<input type="submit" name="save" value="Submit" />
