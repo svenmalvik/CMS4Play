@@ -6,10 +6,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.commons.lang.StringUtils;
-
-import play.Logger;
-
 public class Menu {
 
 	public static final String URL_INDEX = "index";

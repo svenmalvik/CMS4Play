@@ -53,5 +53,6 @@
 	<classpathentry kind="lib" path="/home/sven/workspace/play-1.1RC1/framework/lib/jj-simplecaptcha.jar"/>
 	<classpathentry kind="lib" path="/home/sven/workspace/play-1.1RC1/framework/lib/commons-fileupload-1.2.jar"/>
 	<classpathentry kind="lib" path="/home/sven/workspace/play-1.1RC1/framework/lib/ehcache-core-2.0.0.jar"/>
+	<classpathentry kind="lib" path="/home/sven/workspace/CMS4Play/lib/google/gdata-photos-2.0.jar"/>
 	<classpathentry kind="output" path="eclipse/classes"/>
 </classpath>

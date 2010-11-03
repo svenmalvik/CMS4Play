@@ -3,9 +3,7 @@ package controllers;
 import static models.Menu.URL_INDEX;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 import models.Content;
 import models.Content2PageMapping;
@@ -15,7 +13,6 @@ import models.Page;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.math.RandomUtils;
 
-import play.Logger;
 import play.mvc.Controller;
 
 public class Application extends Controller {

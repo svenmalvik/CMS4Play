@@ -2,8 +2,6 @@ package models;
 
 import java.util.Comparator;
 
-import org.apache.commons.lang.StringUtils;
-
 public class MenuSorter implements Comparator<Page> {
 
 	@Override

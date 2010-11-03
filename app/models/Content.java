@@ -1,9 +1,12 @@
 package models;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Lob;
+import javax.persistence.Transient;
 
 import play.db.jpa.Model;
 
@@ -17,6 +20,8 @@ public class Content extends Model {
 	public String content;
 	public Date createdAt;
 	public Date modifiedAt;
+	@Transient
+	public List<ContentImage> images = new ArrayList<ContentImage>();
 
 	public Content(String content) {
 		this.content = content;

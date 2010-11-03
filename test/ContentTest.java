@@ -1,16 +1,19 @@
 import static models.Menu.URL_INDEX;
 
+import java.io.IOException;
 import java.util.List;
 
-import javax.swing.text.html.HTMLDocument.HTMLReader.ParagraphAction;
-
+import models.ContentImage;
 import models.Menu;
 import models.Page;
 
 import org.junit.Before;
 import org.junit.Test;
 
+import com.google.gdata.util.ServiceException;
+
 import play.test.UnitTest;
+import controllers.Picasa;
 
 public class ContentTest extends UnitTest {
 
@@ -18,6 +21,21 @@ public class ContentTest extends UnitTest {
     public void setup() {
     	new TestData();
     }  
+    
+    @Test
+    public void getImagesForContent() {
+    	List<ContentImage> images = null;
+		try {
+			images = Picasa.getImages("_1_");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ServiceException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	assertEquals(2, images.size());
+    }
     
     @Test
     public void deletePage() {
