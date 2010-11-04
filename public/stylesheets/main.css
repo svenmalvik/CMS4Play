@@ -11,6 +11,19 @@ body {
 	text-decoration:none;
 	word-spacing:normal;
 }
+.contentImages {
+	width: 104px;	
+}
+.captureContentImage {
+	background-color: #cccccc;	
+}
+.imageContentImage {
+	height: 104px;	
+}
+.contentImage {
+	width: 104px;	
+	margin: 0px 0px 5px 0px;
+}
 .edit {
 	display: none;	
 	text-align: left;

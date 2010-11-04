@@ -18,7 +18,7 @@ public class Picasa {
 
 	public static List<ContentImage> getImages(String tag) throws IOException, ServiceException {
 		List<ContentImage> images = new ArrayList<ContentImage>();
-		URL metafeedUrl = new URL("https://picasaweb.google.com/data/feed/base/user/svenmalvik/album/cm?imgmax=912&tag=" + tag + "&thumbsize=32&authkey=Gv1sRgCOu93ZCOr6vNWg");
+		URL metafeedUrl = new URL("https://picasaweb.google.com/data/feed/base/user/svenmalvik/album/cm?imgmax=912&tag=" + tag + "&thumbsize=104&authkey=Gv1sRgCOu93ZCOr6vNWg");
 		PicasawebService myService = new PicasawebService("My Application");
         AlbumFeed resultFeed = myService.getFeed(metafeedUrl, AlbumFeed.class);
         List<PhotoEntry> entries = resultFeed.getPhotoEntries();
@@ -27,6 +27,8 @@ public class Picasa {
           PhotoEntry photo = entries.get(i);
           ContentImage image = new ContentImage();
           image.src = photo.getMediaContents().get(0).getUrl();
+          image.thumbnail1 = photo.getMediaThumbnails().get(0).getUrl();
+          image.caption = photo.getTitle().getPlainText();
           images.add(image);
         }
 		

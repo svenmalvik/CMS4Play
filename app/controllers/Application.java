@@ -60,6 +60,7 @@ public class Application extends Controller {
 			Content content = new Content("").save();
 			c2p = new Content2PageMapping(content, page).save();
 		}
+		// Do we maybe have the content allready?
 		Content content = Content.findById(c2p.content.id);
 		content.updateImages();
 		return content;
