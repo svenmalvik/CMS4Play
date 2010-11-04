@@ -60,7 +60,9 @@ public class Application extends Controller {
 			Content content = new Content("").save();
 			c2p = new Content2PageMapping(content, page).save();
 		}
-		return Content.findById(c2p.content.id);
+		Content content = Content.findById(c2p.content.id);
+		content.updateImages();
+		return content;
 	}
 
 	public static void cms() {
