@@ -11,6 +11,7 @@ import models.ContentImage;
 import com.google.gdata.client.photos.PicasawebService;
 import com.google.gdata.data.photos.AlbumFeed;
 import com.google.gdata.data.photos.GphotoEntry;
+import com.google.gdata.data.photos.PhotoEntry;
 import com.google.gdata.util.ServiceException;
 
 public class Picasa {
@@ -20,16 +21,15 @@ public class Picasa {
 		URL metafeedUrl = new URL("https://picasaweb.google.com/data/feed/base/user/svenmalvik/album/cm?imgmax=912&tag=" + tag + "&thumbsize=32&authkey=Gv1sRgCOu93ZCOr6vNWg");
 		PicasawebService myService = new PicasawebService("My Application");
         AlbumFeed resultFeed = myService.getFeed(metafeedUrl, AlbumFeed.class);
-        List<GphotoEntry> entries = resultFeed.getEntries();
+        List<PhotoEntry> entries = resultFeed.getPhotoEntries();
         
         for(int i=0; i<entries.size(); i++) {
-          GphotoEntry entry = entries.get(i);
+          PhotoEntry photo = entries.get(i);
           ContentImage image = new ContentImage();
-          image.src = entry.getSelfLink().getHref();
+          image.src = photo.getMediaContents().get(0).getUrl();
           images.add(image);
         }
 		
 		return images;
 	}
-
 }

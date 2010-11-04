@@ -27,14 +27,10 @@ public class ContentTest extends UnitTest {
     	List<ContentImage> images = null;
 		try {
 			images = Picasa.getImages("_1_");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ServiceException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		} catch (Exception e) {
 		}
     	assertEquals(2, images.size());
+    	assertEquals("https://lh6.googleusercontent.com/_FQZFr2v6UIA/TM8yfX_p44I/AAAAAAAAAFY/Td61iRU2H6c/s912/Skoda-Octavia-21.jpg", images.get(0).src);
     }
     
     @Test
