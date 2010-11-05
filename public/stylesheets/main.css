@@ -13,6 +13,7 @@ body {
 }
 .contentImages {
 	width: 104px;	
+	float: right;
 }
 .captureContentImage {
 	background-color: #cccccc;	

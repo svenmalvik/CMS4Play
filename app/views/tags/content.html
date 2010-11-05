@@ -1,8 +1,5 @@
 <div class="content">
-	#{verbatim}
-	    ${_content.content}
-	#{/verbatim}
-	
+
 	<div class="contentImages">
 	#{list items:_content.images, as:'image'}
 		<div class="contentImage">
@@ -15,6 +12,11 @@
 		</div>
 	#{/list}	
 	</div>
+	
+	#{verbatim}
+	    ${_content.content}
+	#{/verbatim}
+
 	
 	<br />	
 	<div class="edit">
