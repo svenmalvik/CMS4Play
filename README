@@ -1,2 +1,16 @@
-v.0.0.1
-Initial Play setup
+This CMS is based on the Play WebApp-framework.
+
+Installation
+------------
+1. Install Play
+2. Install MySql and create a database
+2. Get a Picasa account
+	- Create an album (visible for all)
+3. Configure conf/application.conf
+	- Configure Picasa
+	- Configure MySql connection
+	
+Run
+---
+1. Start eclipse/CMS4Play.launch
+2. Press Ctrl to edit the Content or current Page
