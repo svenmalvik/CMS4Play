@@ -31,15 +31,26 @@
 		#{/if}
 		
 		<script type="text/javascript">
-            function edit() {
-            	if (event.keyCode == 17) {
-            		$(".edit").css("display","block");
-            	}
-            }
+		function edit(e)
+		{
+		  var key = e.which
+
+		  if (window.event) { key = event.keyCode; } // IE only
+
+		  if (key == 19) // pause/break
+		  {
+		    $(".editbuttons").css("display","inline");
+		  }
+		  else if (key == 27) // escape
+		  {
+		    $(".editbuttons").css("display","none");
+		  }
+		}
+
 	     </script>	
         
     </head>
-    <body onkeydown="edit()">
+    <body onkeydown="edit(event)">
         #{doLayout /}
         
 		#{if cms && edit == 'content'}
